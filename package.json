@@ -1,0 +1,29 @@
+{
+  "name": "olga-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5190",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "dev:short": "VITE_VARIANT=short vite --port 5191",
+    "build:short": "tsc --noEmit && VITE_VARIANT=short vite build --outDir dist-short",
+    "dev:v3": "VITE_VARIANT=v3 vite --port 5192",
+    "build:v3": "tsc --noEmit && VITE_VARIANT=v3 vite build --outDir dist-v3",
+    "dev:v3dark": "VITE_VARIANT=v3dark vite --port 5193",
+    "build:v3dark": "tsc --noEmit && VITE_VARIANT=v3dark vite build --outDir dist-v3dark"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  }
+}

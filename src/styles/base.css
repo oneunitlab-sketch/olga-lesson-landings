@@ -1,0 +1,97 @@
+/* ── база, типографіка, спільні компоненти ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  background-color: var(--bg);
+  /* мʼякі плями світла на фоні */
+  background-image:
+    radial-gradient(560px 560px at 8% 18%, var(--glow-2), transparent 70%),
+    radial-gradient(600px 600px at 96% 46%, var(--glow-1), transparent 70%),
+    radial-gradient(520px 520px at 12% 82%, var(--glow-1), transparent 70%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: -.011em;
+  overflow-x: hidden;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(232, 105, 125, .22);
+}
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; text-decoration: none; }
+[id] { scroll-margin-top: 24px; }
+
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 99;
+  background: var(--wine-500); color: var(--ink);
+  padding: 12px 20px; border-radius: 0 0 6px 0; font-weight: 700;
+}
+.skip:focus { left: 0; }
+
+.wrap { width: min(var(--container), 100%); margin: 0 auto; padding-inline: var(--gutter); position: relative; z-index: 2; }
+.sec { padding-block: var(--pad); position: relative; overflow: hidden; }
+
+/* ── свічення ── */
+.blob { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(90px); z-index: 0; }
+.blob.a {
+  width: min(1100px, 120vw); height: 600px; left: 50%; top: -180px; transform: translateX(-50%);
+  background: radial-gradient(50% 50%, var(--glow-1), transparent 70%);
+}
+.blob.blob-bottom { top: auto; bottom: -260px; }
+
+/* ── заголовки ── */
+h1, h2, h3 {
+  font-family: var(--font-head); font-weight: 800; text-transform: uppercase;
+  letter-spacing: -.02em; line-height: .98; text-wrap: balance;
+}
+h1 { font-size: var(--fs-h1); letter-spacing: -.03em; }
+h2 { font-size: var(--fs-h2); line-height: 1.02; }
+h3 { font-size: clamp(1rem, 1.5vw, 1.24rem); letter-spacing: -.01em; line-height: 1.1; }
+
+/* хромований текст (срібний градієнт) */
+.chrome, .gold-head, .hero h1, .stats b, .who-title, .m1 {
+  background: var(--chrome);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+}
+/* акцент усередині хромованого тексту */
+.hero h1 em, .m1 em { font-style: normal; -webkit-text-fill-color: var(--accent); color: var(--accent); }
+
+/* «сходинка»: кожен наступний рядок зсунутий праворуч */
+.step-head { display: flex; flex-direction: column; align-items: flex-start; }
+.step-head span { display: block; }
+.step-head span:nth-child(2) { padding-left: 1.6em; }
+.step-head span:nth-child(3) { padding-left: .7em; }
+
+.sec-sub { margin: 20px 0 0; max-width: min(640px, 100%); color: var(--ink-2); font-size: clamp(1rem, 1.5vw, 1.16rem); line-height: 1.45; }
+
+/* ── кнопка-«пігулка» ── */
+.btn {
+  position: relative; display: block; width: 100%; max-width: var(--btn-max); margin-inline: auto;
+  font-family: var(--font-head); font-weight: 600; text-transform: uppercase;
+  letter-spacing: .02em; font-size: clamp(.82rem, 2.6vw, 1rem); text-align: left;
+  padding: var(--btn-pad); border-radius: var(--btn-radius);
+  background: var(--btn-bg); color: var(--btn-text);
+  box-shadow: var(--btn-shadow);
+  transition: transform .2s, box-shadow .2s;
+}
+/* темне коло зі стрілкою праворуч */
+.btn::after {
+  content: ""; position: absolute; right: 22px; top: 50%; transform: translateY(-50%);
+  width: 46px; height: 46px; border-radius: 50%; background: var(--btn-circle);
+  box-shadow: inset 0 0 0 1px rgba(242, 201, 207, .18);
+}
+.btn::before {
+  content: "↗"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%);
+  width: 46px; height: 46px; display: grid; place-items: center; z-index: 2;
+  color: var(--btn-arrow); font-size: 1.3rem; font-family: var(--font-body); font-weight: 500;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--btn-shadow-hover); }
+.btn:focus-visible { outline: 2px solid var(--blush); outline-offset: 4px; }
+.cta-row { margin-top: clamp(30px, 4vw, 44px); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}

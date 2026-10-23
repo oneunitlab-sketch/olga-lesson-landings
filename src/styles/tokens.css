@@ -1,0 +1,80 @@
+/* ════════════════════════════════════════════════════════════════
+   DESIGN TOKENS — дизайн сайту Ольги Гончаренко (mentoring.olga-goncharenko.com.ua):
+   глибокий винний фон, бежеві акценти, золота кнопка, вузький заголовковий шрифт.
+   Сітка, розміри й відступи — з шаблону V1. Міняйте тут.
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  color-scheme: dark;
+
+  /* ── винні відтінки (з сайту) ── */
+  --wine-950: #33050A;       /* фон сторінки */
+  --wine-900: #3A0B10;       /* текст на золотій кнопці, кружок стрілки */
+  --wine-850: #4A0409;
+  --wine-800: #59040C;       /* секція «Що всередині» */
+  --wine-700: #7F0507;
+  --wine-600: #840002;       /* насичений червоно-винний */
+  --wine-500: #A50003;
+  --wine-450: #A50003;
+  --wine-300: #E0C0A8;       /* акценти в тексті */
+
+  /* ── фони ── */
+  --bg: var(--wine-950);
+  --bg-2: rgba(89, 4, 12, .45);
+  --bg-inside: var(--wine-800);
+  --glow-1: rgba(132, 0, 2, .55);         /* плями світла — «оксамит», як на сайті */
+  --glow-2: rgba(165, 0, 3, .35);
+
+  /* ── бежеві акценти й текст ── */
+  --ink: #FFFFFF;
+  --ink-2: #EADACB;                       /* основний бежевий текст сайту */
+  --ink-3: rgba(234, 218, 203, .6);
+  --blush: #E0C0A8;                       /* номери, підписи, рамки */
+  --star: #FFE596;
+  --check-bg: #EADACB;
+  --check: #59040C;
+  --accent: #E0C0A8;
+
+  /* ── бежевий градієнтний текст (як «РЕАНІМАЦІЯ» на сайті) ── */
+  --chrome: linear-gradient(180deg, #F6E9DC 0%, #E0C0A8 55%, #BB9F8D 100%);
+  /* плашки й картки — світло-бежеві */
+  --silver: linear-gradient(160deg, #F6EADF 0%, #EADACB 55%, #E0C0A8 100%);
+  --on-silver: #3A0B10;
+
+  /* ── лінії ── */
+  --line: rgba(234, 218, 203, .22);
+  --line-2: rgba(234, 218, 203, .10);
+
+  /* ── картки ── */
+  --card-bg: linear-gradient(180deg, rgba(132, 0, 2, .30), rgba(51, 5, 10, .6));
+  --card-border: 1px solid rgba(234, 218, 203, .18);
+  --r-card-soft: 16px;
+
+  /* ── шрифти ── */
+  --font-head: Oswald, 'Bebas Neue', Impact, sans-serif;
+  --font-body: Manrope, -apple-system, BlinkMacSystemFont, sans-serif;
+  --fs-body: 16px;
+  --fs-h1: clamp(1.9rem, 7vw, 3.7rem);    /* Oswald вужчий — більший кегль, щоб заголовок займав ту саму площу */
+  --fs-h2: clamp(1.7rem, 6vw, 3rem);
+  --fs-lede: clamp(1rem, 1.45vw, 1.14rem);
+
+  /* ── сітка й відступи (з шаблону) ── */
+  --container: 1180px;
+  --gutter: 22px;
+  --pad: clamp(78px, 9.5vw, 146px);
+  --gap: clamp(30px, 4.6vw, 70px);
+
+  /* ── радіуси ── */
+  --r-card: 12px;
+  --r-pill: 1000px;
+
+  /* ── кнопка — золотий градієнт із сайту ── */
+  --btn-bg: linear-gradient(90deg, #F2D160 0%, #FFE596 21%, #FFE596 50%, #F2D160 76%, #FFE596 100%);
+  --btn-text: #3A0B10;
+  --btn-radius: 8px;
+  --btn-max: 760px;
+  --btn-pad: 34px 74px 34px 28px;
+  --btn-shadow: 0 18px 48px -14px rgba(242, 209, 96, .45);
+  --btn-shadow-hover: 0 24px 62px -14px rgba(255, 229, 150, .6);
+  --btn-circle: #3A0B10;
+  --btn-arrow: #FFE596;
+}

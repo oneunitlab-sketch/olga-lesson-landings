@@ -1,0 +1,162 @@
+/* ════════════════════════════════════════════════════════════════
+   КОРОТКА МОБІЛЬНА ВЕРСІЯ (VITE_VARIANT=short, src/ShortApp.tsx).
+   Усі правила — під .short, щоб не впливати на інші версії.
+   ════════════════════════════════════════════════════════════════ */
+.short { overflow-x: hidden; }
+.short .s-wrap {
+  width: 100%; max-width: 480px; margin: 0 auto;
+  padding: 20px 16px 48px; position: relative; z-index: 2;
+}
+
+/* ── типографіка ── */
+.short h1, .short h2, .short h3 { text-wrap: balance; }
+.short .s-h1 {
+  font-family: var(--font-head); font-weight: 700; text-transform: uppercase;
+  font-size: 30px; line-height: 1.08; letter-spacing: -.005em;
+  color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; background: none;
+  margin: 14px 0 0;
+}
+.short .s-h1 em, .short .s-final-title em {
+  font-style: normal;
+  background: var(--chrome); -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+}
+.short .s-h1 b { font-weight: 700; }
+.short .s-h2 {
+  font-family: var(--font-head); font-weight: 600; text-transform: uppercase;
+  font-size: 23px; line-height: 1.1; letter-spacing: .01em;
+  background: var(--chrome); -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+  margin: 0 0 16px;
+}
+.short .s-lede { margin: 12px 0 0; font-size: 15px; line-height: 1.5; color: var(--ink-2); }
+
+/* ── hero ── */
+.short .s-hero { text-align: left; }
+.short .badge.s-badge {
+  margin: 0; padding: 6px 12px; font-size: 11px; line-height: 1.3; letter-spacing: .06em;
+  box-shadow: none;
+}
+.short .hero-shot { width: 100%; margin: 18px 0 0; padding: 0; perspective: none; }
+.short .tape {
+  transform: none; border-radius: 14px;
+  box-shadow: 0 0 0 1px rgba(234, 218, 203, .22), 0 24px 48px -24px rgba(0, 0, 0, .9);
+}
+.short .tape::after { background: linear-gradient(180deg, transparent 60%, rgba(26, 0, 6, .45) 100%); }
+
+/* ── кнопка ── */
+.short .s-cta { margin-top: 18px; }
+.short .btn {
+  display: flex; align-items: center; width: 100%; max-width: none; min-height: 56px;
+  padding: 0 58px 0 18px; border-radius: 10px;
+  font-family: var(--font-body); font-weight: 800; text-transform: none;
+  font-size: 17px; line-height: 1.2; letter-spacing: 0;
+  box-shadow: 0 12px 30px -14px rgba(242, 209, 96, .5);
+}
+.short .btn::after, .short .btn::before { width: 36px; height: 36px; right: 10px; }
+.short .btn::before { font-size: 1.05rem; }
+.short .btn:hover { transform: none; }
+.short .btn:active { transform: scale(.985); }
+.short .s-note { margin: 10px 0 0; text-align: center; font-size: 13px; line-height: 1.4; color: rgba(234, 218, 203, .6); }
+
+/* ── секції ── */
+.short .s-sec { margin-top: 40px; }
+
+/* усередині уроку */
+.short .s-points { list-style: none; display: grid; gap: 0; }
+.short .s-point {
+  display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: start;
+  padding: 14px 0; border-top: 1px solid var(--line-2);
+}
+.short .s-point:last-child { border-bottom: 1px solid var(--line-2); }
+.short .s-num {
+  font-family: var(--font-head); font-weight: 500; font-size: 20px; line-height: 1.15;
+  color: var(--blush); font-variant-numeric: tabular-nums;
+}
+.short .s-point-title {
+  font-family: var(--font-body); text-transform: none; letter-spacing: -.01em;
+  font-size: 18px; font-weight: 700; line-height: 1.25; color: #FFFFFF;
+}
+.short .s-point-text { margin-top: 3px; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
+
+/* кейси */
+.short .s-cases { display: grid; gap: 10px; }
+.short .s-case {
+  display: grid; grid-template-columns: 72px 1fr; gap: 12px; align-items: start;
+  padding: 12px; border-radius: 12px; background: var(--card-bg); border: var(--card-border);
+}
+.short .s-case-img { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; background: var(--wine-900); }
+.short .s-case-body { min-width: 0; }
+.short .s-case-title {
+  font-family: var(--font-body); text-transform: none; letter-spacing: -.01em;
+  font-size: 16px; font-weight: 700; line-height: 1.25; color: #FFFFFF;
+}
+.short .s-case-text { margin-top: 4px; font-size: 14px; line-height: 1.45; color: var(--ink-2); overflow-wrap: anywhere; }
+.short .s-case-format {
+  margin-top: 6px; font-size: 12px; font-weight: 700; line-height: 1.3;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--blush);
+}
+
+/* автор — фото Ольги на всю ширину картки */
+.short .s-author { padding: 0 16px 16px; border-radius: 14px; background: var(--card-bg); border: var(--card-border); overflow: hidden; }
+.short .s-author-head { position: relative; margin: 0 -16px; }
+.short .s-author-photo {
+  display: block; width: 100%; height: 340px; object-fit: contain; object-position: bottom center;
+  background: radial-gradient(60% 70% at 50% 60%, rgba(165, 0, 3, .55), transparent 75%);
+}
+.short .s-author-cap {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 12px;
+  background: linear-gradient(180deg, transparent, rgba(51, 5, 10, .92) 60%);
+}
+.short .s-author-kicker { font-size: 12px; line-height: 1.3; color: var(--ink-3); }
+.short .s-author-name {
+  font-family: var(--font-head); font-weight: 600; text-transform: uppercase;
+  font-size: 22px; line-height: 1.15; color: #FFFFFF;
+}
+.short .s-stats {
+  list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
+  margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line-2);
+}
+.short .s-stats li { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.short .s-stat-value {
+  font-family: var(--font-head); font-weight: 600; font-size: 22px; line-height: 1.05; white-space: nowrap;
+  background: var(--chrome); -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+}
+.short .s-stat-text { font-size: 12px; line-height: 1.35; color: var(--ink-2); }
+
+/* фінал */
+.short .s-final { text-align: center; }
+.short .s-final-title {
+  font-family: var(--font-head); font-weight: 700; text-transform: uppercase;
+  font-size: 24px; line-height: 1.12; letter-spacing: 0; color: #FFFFFF;
+}
+
+/* липка кнопка */
+.short .sticky { padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
+.short .sticky .btn { max-width: 448px; margin-inline: auto; padding: 0 58px 0 18px; }
+.short .sticky .btn::after, .short .sticky .btn::before { width: 36px; height: 36px; right: 10px; }
+
+@media (max-width: 360px) {
+  .short .s-h1 { font-size: 28px; }
+  .short .s-stat-value { font-size: 20px; }
+}
+
+/* що всередині — каруселька слайдів */
+.short .s-hint { margin-top: 6px; font-size: 13px; color: var(--ink-3); }
+.short .s-scenes {
+  display: flex; gap: 12px; margin: 14px -16px 0; padding: 0 16px 6px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.short .s-scenes::-webkit-scrollbar { display: none; }
+.short .s-scene {
+  flex: 0 0 84%; scroll-snap-align: start;
+  border-radius: 14px; overflow: hidden; background: var(--card-bg); border: var(--card-border);
+}
+.short .s-scene-img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: #fff; }
+.short .s-scene-body { padding: 14px; }
+.short .s-scene-title { font-size: 16px; font-weight: 700; line-height: 1.3; color: #FFFFFF; }
+.short .s-scene-list { list-style: none; margin-top: 10px; display: grid; gap: 8px; }
+.short .s-scene-list li { position: relative; padding-left: 16px; font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+.short .s-scene-list li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--blush); }
