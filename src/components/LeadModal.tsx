@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import type { Content } from '../content/landing';
+import { utmParams } from '../lib/utm';
 
 type Lead = Content['lead'];
 type Status = 'idle' | 'sending' | 'sent' | 'error';
@@ -16,13 +17,6 @@ function formatUsPhone(raw: string) {
   return out;
 }
 const phoneDigits = (v: string) => v.replace(/\D/g, '').replace(/^1/, '');
-
-function utm() {
-  const p = new URLSearchParams(window.location.search);
-  const out: Record<string, string> = {};
-  p.forEach((v, k) => { if (k.startsWith('utm_') || k === 'fbclid' || k === 'gclid') out[k] = v; });
-  return out;
-}
 
 /**
  * Попап із формою заявки. Відкривається кліком по будь-якому посиланню на «#lead».
@@ -95,7 +89,7 @@ export function LeadModal({ lead }: { lead: Lead }) {
           situation,
           page: window.location.href,
           createdAt: new Date().toISOString(),
-          ...utm(),
+          ...utmParams(),
         }),
       });
       if (!r.ok) throw new Error(String(r.status));

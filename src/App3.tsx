@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { content, variant } from './content';
-import type { Cta } from './content/landing';
+import { BOT_URL, WIDGET_ID, WIDGET_DOMAIN, type Cta } from './content/landing';
 import { Rich } from './components/ui';
 import { VideoPlayer } from './components/VideoPlayer';
+import { WidgetModal } from './components/WidgetModal';
 
 /**
  * Версія 3 — світлий «редакційний» дизайн у стилі Instagram-сторіз.
@@ -184,6 +185,8 @@ export default function App3() {
           {hero.cta.text}
         </a>
       </div>
+
+      <WidgetModal widgetId={WIDGET_ID} domain={WIDGET_DOMAIN} trigger={BOT_URL} lp={variant} />
     </div>
   );
 }

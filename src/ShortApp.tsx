@@ -1,7 +1,9 @@
-import { content } from './content';
+import { content, variant } from './content';
+import { BOT_URL, WIDGET_ID, WIDGET_DOMAIN } from './content/landing';
 import { Button, Rich } from './components/ui';
 import { VideoPlayer } from './components/VideoPlayer';
 import { StickyCta } from './components/StickyCta';
+import { WidgetModal } from './components/WidgetModal';
 
 /** Коротка мобільна версія: hero → 4 теми уроку → що всередині (каруселька карток) → автор → фінальна кнопка. */
 export default function ShortApp() {
@@ -88,6 +90,7 @@ export default function ShortApp() {
       </main>
 
       <StickyCta cta={hero.cta} showAfter={500} targetId={final.id} />
+      <WidgetModal widgetId={WIDGET_ID} domain={WIDGET_DOMAIN} trigger={BOT_URL} lp={variant} />
     </div>
   );
 }

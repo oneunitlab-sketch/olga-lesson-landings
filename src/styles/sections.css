@@ -543,3 +543,38 @@ h1, h2, h3, .m1, .who-title { letter-spacing: .005em; line-height: 1.02; }
   .manifest { padding-block: 64px 28px; }
   .cta-row { margin-top: 26px; }
 }
+
+/* ═══ ПОПАП ІЗ ВІДЖЕТОМ SMARTSENDER (ленди short / v3 / v3dark) ═══ */
+.ss-overlay {
+  position: fixed; inset: 0; z-index: 300; display: grid; place-items: center;
+  padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
+  background: rgba(8, 8, 10, .78); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  overflow-y: auto; animation: ssFade .2s ease both;
+}
+.ss-overlay.is-off { display: none; }
+@keyframes ssFade { from { opacity: 0; } to { opacity: 1; } }
+.ss-dialog {
+  position: relative; width: min(420px, 100%); margin: auto; padding-top: 46px;
+  animation: ssUp .25s cubic-bezier(.22, .61, .36, 1) both;
+}
+@keyframes ssUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+/* висоту iframe ставить сам скрипт SmartSender — обмежуємо лише екраном */
+.ss-box {
+  background: #fff; border-radius: 16px; overflow: hidden auto; max-height: 84vh;
+  box-shadow: 0 40px 100px -30px rgba(0, 0, 0, .9); -webkit-overflow-scrolling: touch;
+}
+.ss-landing iframe { display: block; width: 100%; border: 0; }
+.ss-loading { padding: 48px 16px; text-align: center; color: #767676; font-size: .9rem; }
+.ss-box:has(iframe) .ss-loading { display: none; }
+.ss-close {
+  position: absolute; right: 0; top: 0; width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .3); background: rgba(0, 0, 0, .45); color: #fff;
+  font: 400 24px/1 system-ui, sans-serif; cursor: pointer;
+}
+.ss-close:hover { background: rgba(0, 0, 0, .75); }
+.ss-close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.ss-fallback {
+  display: block; margin-top: 12px; text-align: center;
+  color: rgba(255, 255, 255, .72); font-size: .82rem; text-decoration: underline;
+}
+@media (prefers-reduced-motion: reduce) { .ss-overlay, .ss-dialog { animation: none; } }
