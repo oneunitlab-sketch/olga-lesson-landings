@@ -19,7 +19,7 @@ export const BOT_URL = 'https://telegram.me/OlgaGonchrenko_bot?start=dzpNdG1ONjJ
 
 /** Віджет SmartSender — точка входу у воронку, звʼязана з CRM. Кнопки відкривають його в попапі (WidgetModal).
     ID беруть з адреси віджета: …/lp/<WIDGET_ID>, домен — піддомен кабінету. */
-export const WIDGET_ID = 'MtmN62fM';
+export const WIDGET_ID = 'jpCWANIj';
 export const WIDGET_DOMAIN = 'olgag';
 
 const lessonCta: Cta = { text: 'Забрати інструкцію', url: BOT_URL };

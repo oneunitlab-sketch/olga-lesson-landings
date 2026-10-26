@@ -545,19 +545,23 @@ h1, h2, h3, .m1, .who-title { letter-spacing: .005em; line-height: 1.02; }
 }
 
 /* ═══ ПОПАП ІЗ ВІДЖЕТОМ SMARTSENDER (ленди short / v3 / v3dark) ═══ */
+/* Прихований попап лишається в DOM і далі вантажить віджет у фоні, тому ховаємо його
+   прозорістю, а не display: none — інакше завантаження почалося б аж на кліку. */
 .ss-overlay {
   position: fixed; inset: 0; z-index: 300; display: grid; place-items: center;
   padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
   background: rgba(8, 8, 10, .78); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-  overflow-y: auto; animation: ssFade .2s ease both;
+  overflow-y: auto; opacity: 1; transition: opacity .2s ease;
 }
-.ss-overlay.is-off { display: none; }
-@keyframes ssFade { from { opacity: 0; } to { opacity: 1; } }
+.ss-overlay.is-off {
+  opacity: 0; pointer-events: none; overflow: hidden;
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+}
 .ss-dialog {
   position: relative; width: min(420px, 100%); margin: auto; padding-top: 46px;
-  animation: ssUp .25s cubic-bezier(.22, .61, .36, 1) both;
+  transition: transform .25s cubic-bezier(.22, .61, .36, 1), opacity .25s ease;
 }
-@keyframes ssUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.is-off .ss-dialog { transform: translateY(16px); opacity: 0; }
 /* висоту iframe ставить сам скрипт SmartSender — обмежуємо лише екраном */
 .ss-box {
   background: #fff; border-radius: 16px; overflow: hidden auto; max-height: 84vh;
@@ -577,4 +581,4 @@ h1, h2, h3, .m1, .who-title { letter-spacing: .005em; line-height: 1.02; }
   display: block; margin-top: 12px; text-align: center;
   color: rgba(255, 255, 255, .72); font-size: .82rem; text-decoration: underline;
 }
-@media (prefers-reduced-motion: reduce) { .ss-overlay, .ss-dialog { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .ss-overlay, .ss-dialog { transition: none; } }
