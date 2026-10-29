@@ -1,0 +1,19 @@
+/* Тема «Смарагд» поверх v4: темно-зелений «грошовий» фон і золото */
+:root{--cta:linear-gradient(90deg,#e9c25a 0%,#ffe596 50%,#e9c25a 100%);--cta-ink:#15100a;--cta-shadow:0 2px .5px #8a6a1e;--sticky-bg:#04110ce6}
+html,body{background:#030d09}
+.page{background-color:#06160f;background-blend-mode:luminosity}
+.card{background:linear-gradient(180deg,#0f2a1f,#0a1f17)}
+.chip,.hero-gift{background:#0a1f17}
+.chip i,.ov-ic{background:linear-gradient(135deg,#f5d670,#ffe596);box-shadow:0 2px .5px #8a6a1e}
+.chip svg,.ov-ic svg{stroke:#15100a}
+.row{background:#12352a}
+.mod4,.case,.plan-item>div{background:#0a1f17}
+.photo-card,.photo-card .meta{background:#04110c}
+.today{background:linear-gradient(160deg,#2f3a1c,#0a1f17 70%)}
+.offer,.result{background:#12352a}
+.vs .no{background:#12352a}
+.gift4 .timer b{background:linear-gradient(180deg,#f5d670,#e9c25a);color:#15100a}
+.timer b{background:linear-gradient(180deg,#12352a 0 49%,#0a1f17 51% 100%)}
+.foot{background:#04110c}
+dialog.order{background:#0f2a1f}
+.sticky-cta{border-top-color:#12352a}

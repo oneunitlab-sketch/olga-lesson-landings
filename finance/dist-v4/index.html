@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="uk" data-lp="v4">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Фінансовий порядок у салоні — лекція Ольги Гончаренко</title>
+<meta name="description" content="Безкоштовна лекція «Фінансовий порядок» для власниць салонів краси. Як перестати працювати більше за своїх майстрів і почати забирати чистий прибуток.">
+<meta property="og:title" content="Фінансовий порядок у салоні — 90 хвилин з Ольгою Гончаренко">
+<meta property="og:description" content="Безкоштовна лекція Ольги Гончаренко для власниць салонів">
+<meta property="og:image" content="img/olga-gloves.webp">
+<meta name="theme-color" content="#101010">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Montserrat:wght@400;500;600;700;800&family=Marck+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="olga.css">
+<style>
+/* Структура як у шаблоні «Волоски за 3 дні», кольори й прийоми — Ольги */
+.in{padding:0 18px}
+section{padding:22px 0}
+.card{position:relative;padding:22px 18px;border-radius:14px;background:linear-gradient(180deg,#1f1f1f,#151515);border:.5px solid rgba(255,229,150,.45)}
+.script{display:block;font-family:'Marck Script',cursive;font-weight:400;text-transform:none;font-size:min(16vw,70px);line-height:.9;letter-spacing:0;background:linear-gradient(120deg,#f2d160,#ffe596 49%,#f2d160);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ct{text-align:center}
+.h{line-height:1.12}
+.btn.wide{width:100%;font-size:.95rem;padding:0 18px}
+.btn.silver{background:linear-gradient(90deg,#9a9a9a,#f4f4f4 45%,#d6d6d6 60%,#9a9a9a);color:#111;box-shadow:0 2px .5px #5a5a5a}
+
+/* верхні плашки */
+.top{display:flex;justify-content:space-between;gap:10px;padding:14px 18px 0}
+.chip{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:#1d1d1d;border:.5px solid rgba(255,229,150,.45);font-size:.8rem;font-weight:600;line-height:1.2}
+.chip i{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--cta);flex:none}
+.chip svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2}
+.chip small{display:block;font-weight:500;color:#c8c8c8;font-size:.78rem}
+
+/* hero */
+.hero{padding:26px 0 10px;text-align:center}
+.hero .script{margin-bottom:-10px;position:relative;z-index:1}
+.hero h1{font-size:min(15vw,66px);line-height:.95}
+.tagline{display:inline-block;margin-top:14px;padding:6px 14px;border-radius:999px;border:1px solid #f5d670;font:600 .82rem var(--font-h);letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+.hero .lead{margin:14px auto 0;max-width:34ch;font-size:.98rem;color:#efefef}
+.hero .btn{margin-top:20px}
+.photo-card{position:relative;margin-top:18px;border-radius:14px;overflow:hidden;border:.5px solid rgba(255,229,150,.45);background:#000;text-align:left}
+.locked{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;cursor:pointer;background:#111}
+.locked video{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}
+.locked::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(16,16,16,.15),rgba(16,16,16,.65))}
+.lock{position:absolute;left:50%;top:44%;z-index:1;display:grid;place-items:center;width:78px;height:78px;margin:-39px 0 0 -39px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(255,229,150,.55);animation:lockPulse 1.8s ease-out infinite}
+.lock svg{width:36px;height:36px;fill:none;stroke:#111;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lock-cap{position:absolute;left:0;right:0;top:calc(44% + 52px);z-index:1;text-align:center;font:600 .82rem var(--font-b);text-transform:uppercase;letter-spacing:.04em}
+@keyframes lockPulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,229,150,.55)}60%{transform:scale(1.07);box-shadow:0 0 0 22px rgba(255,229,150,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,229,150,0)}}
+@media (prefers-reduced-motion:reduce){.lock{animation:none}}
+.photo-card .price{text-align:right;flex:none}
+.photo-card .price s{display:block;font:600 1.1rem var(--font-h);color:#cfcfcf;text-decoration-color:#e22836}
+.photo-card .price b{display:block;font:600 2.4rem/1 var(--font-h);color:#ffe596}
+.photo-card .meta{position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:16px;background:#0b0b0b}
+.photo-card .name{display:inline-block;white-space:nowrap;font-size:min(4.6vw,1.15rem)!important;padding:6px 12px;border-radius:6px;background:var(--gold);color:#000;font:600 1.15rem var(--font-h);text-transform:uppercase}
+.ticks{list-style:none;padding:0;margin-top:10px;display:grid;gap:6px}
+.ticks li{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;line-height:1.3}
+.ticks li::before{content:"✓";display:grid;place-items:center;flex:none;width:18px;height:18px;border-radius:50%;background:var(--gold);color:#000;font-size:.68rem;font-weight:800;margin-top:1px}
+
+/* огляд модулів */
+.ov{display:grid}
+.ov-row{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;padding:14px 0}
+.ov-row+.ov-row{border-top:1px solid rgba(255,229,150,.2)}
+.ov-ic{display:grid;place-items:center;width:72px;height:72px;border-radius:14px;background:var(--cta);box-shadow:0 2px .5px #9b0c17}
+.ov-ic svg{width:34px;height:34px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ov-row h3{font:600 1.55rem/1 var(--font-h);text-transform:uppercase;margin-bottom:6px}
+.ov-row p{font-size:.86rem;line-height:1.35;color:#e5e5e5}
+.ov-row p b{color:#fff}
+
+/* подарунок зі стрічкою */
+.gift4{overflow:hidden}
+.ribbon{position:absolute;top:18px;right:-34px;width:140px;padding:5px 0;transform:rotate(45deg);background:linear-gradient(90deg,#f5d670,#ffe596,#f5d670);color:#000;font:600 .74rem var(--font-h);letter-spacing:.08em;text-align:center;text-transform:uppercase}
+.gift4 p{font-size:.88rem;font-weight:500;max-width:28ch}
+.gift4 h3{margin:6px 0 12px;font:600 1.6rem/1.02 var(--font-h);text-transform:uppercase;color:var(--accent);max-width:16ch}
+.gift4 .timer{justify-content:flex-start}
+.gift4 .timer b{font-size:1.5rem;min-width:46px;padding:8px 2px;background:var(--cta);border-radius:6px}
+.gift4 .timer small{font-size:.74rem}
+.gift4 .timer i{line-height:36px}
+
+/* для кого */
+.for .h{font-size:min(10.5vw,46px)}
+.rows{display:grid;gap:10px;margin-top:18px}
+.row{display:grid;grid-template-columns:38px 1fr 30px;gap:10px;align-items:center;padding:16px 14px;border-radius:12px;background:#262626}
+.row b{font:600 1.5rem var(--font-h);color:var(--accent)}
+.row span{font-size:.92rem;line-height:1.3}
+.row svg{width:26px;height:26px;fill:none;stroke:#cfcfcf;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.truth{position:relative;margin:20px 0 4px;padding:0 26px;text-align:center;font-size:.95rem;line-height:1.45}
+.truth::before,.truth::after{content:"✦";position:absolute;top:50%;transform:translateY(-50%);color:var(--accent);font-size:1.2rem}
+.truth::before{left:0}.truth::after{right:0}
+.truth b{color:var(--accent)}
+
+/* програма модулями-вкладками */
+.mods4{display:grid;gap:14px;margin-top:18px}
+.mod4{border-radius:14px;overflow:hidden;background:#1b1b1b;border:.5px solid rgba(255,229,150,.45)}
+.mod4 header{display:grid;grid-template-columns:1.25fr 1fr;align-items:stretch}
+.mod4 .tab{padding:10px 12px;font:600 .95rem/1.05 var(--font-h);text-transform:uppercase;color:#111;background:linear-gradient(90deg,#9a9a9a,#f4f4f4 45%,#d6d6d6 60%,#9a9a9a);border-radius:0 0 14px 0}
+.mod4:nth-child(even) .tab{background:var(--gold)}
+.mod4 .num{display:grid;place-items:center;font:600 .9rem var(--font-h);text-transform:uppercase;color:var(--accent);letter-spacing:.04em}
+.mod4 ul{list-style:none;padding:14px 16px 16px;display:grid;gap:10px}
+.mod4 li{position:relative;padding-left:26px;font-size:.9rem;line-height:1.35}
+.mod4 li::before{content:"✦";position:absolute;left:0;top:-1px;color:var(--accent)}
+
+/* експерт */
+.expert .h{font-size:min(11vw,48px)}
+.story4{list-style:none;padding:0;display:grid;gap:14px;margin-top:20px}
+.story4 li{position:relative;padding-left:34px;font-size:.92rem;line-height:1.4}
+.story4 li::before{content:"✦";position:absolute;left:0;top:-4px;font-size:1.5rem;color:var(--accent)}
+.today{position:relative;margin-top:20px;padding:20px 16px;border-radius:14px;background:linear-gradient(160deg,#3a3326,#1d1d1d 70%);border:.5px solid rgba(255,229,150,.6)}
+.today h3{font:600 1.3rem var(--font-h);text-transform:uppercase;margin-bottom:10px}
+.today .ticks li{padding:9px 0;border-top:1px solid rgba(255,229,150,.18);font-size:.9rem}
+.today .ticks li:first-child{border-top:0}
+.bookmark{position:absolute;top:-1px;right:18px;width:26px;height:36px;background:var(--gold);clip-path:polygon(0 0,100% 0,100% 100%,50% 75%,0 100%)}
+.expert-photo{margin-top:16px;border-radius:14px;overflow:hidden;background:#000;border:.5px solid rgba(255,229,150,.45)}
+.expert-photo img{width:100%;height:460px;object-fit:cover;object-position:50% 20%}
+.quote{display:flex;gap:12px;align-items:flex-start;margin-top:12px;padding:16px;border-radius:12px;background:#2b2b2b;font-size:.92rem;font-style:italic;line-height:1.4}
+.quote img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none;border:1.5px solid #ffe596}
+
+.ex-head{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center}
+.ex-head img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 12%;border:2px solid #ffe596}
+.ex-head .script{font-size:2.6rem;margin-bottom:-4px}
+.ex-head .h{font-size:min(9vw,40px)}
+.ex-lead{margin-top:16px;font-size:.92rem;line-height:1.45;color:#e9e9e9}
+.photo-card .role{margin-top:8px;font-size:.88rem;font-weight:600}
+/* участь */
+.part .h{font-size:min(11vw,48px)}
+.part .intro{margin:14px 0 16px;font-size:.92rem;text-align:center;color:#e5e5e5;padding-bottom:16px;border-bottom:1px solid rgba(255,229,150,.2)}
+.part ul{list-style:none;padding:0;display:grid;gap:10px}
+.part li{position:relative;padding-left:26px;font-size:.9rem;line-height:1.35}
+.part li::before{content:"✦";position:absolute;left:0;top:-1px;color:var(--accent)}
+.part li b{color:#fff}
+.price4{display:flex;justify-content:center;align-items:flex-start;gap:8px;margin:22px 0 6px}
+.price4 b{font:600 min(19vw,80px)/1 var(--font-h);background:linear-gradient(120deg,#f2d160,#ffe596 49%,#f2d160);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price4 s{font:600 1.1rem var(--font-h);color:#bdbdbd;text-decoration-color:#e22836;margin-top:6px}
+.ps{margin-top:14px;text-align:center;font-size:.86rem;color:#d6d6d6}
+.ps b{color:var(--accent)}
+
+/* біжучий рядок */
+.marquee{margin:18px -10px;transform:rotate(-4deg);background:var(--gold);color:#000;overflow:hidden;white-space:nowrap;padding:8px 0}
+.marquee div{display:inline-block;font-family:'Marck Script',cursive;font-size:1.5rem;animation:mq 26s linear infinite}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee div{animation:none}}
+
+/* концепція */
+.idea .h{font-size:min(10.6vw,46px)}
+.idea .story4{margin-top:18px}
+.cmp{margin-top:20px;padding:6px 16px 16px}
+.cmp dl{display:grid}
+.cmp dl div{display:grid;gap:4px;padding:12px 0;border-bottom:1px dashed rgba(255,229,150,.3)}
+.cmp dt{font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#bdbdbd}
+.cmp dd{color:#fff;font-size:1rem;font-weight:600}
+.cmp dl div:last-child dd{color:var(--accent);font-weight:700}
+.cmp .arrow{display:flex;gap:14px;align-items:center;margin-top:16px}
+.cmp .arrow span{font-size:2rem;color:var(--accent)}
+.cmp .arrow b{display:block;font:600 1.25rem/1 var(--font-h);text-transform:uppercase}
+.cmp .arrow small{font:500 .86rem/1.3 var(--font-b);color:#cfcfcf}
+
+/* що далі */
+.next{padding:0;overflow:hidden}
+.next>img{width:100%;height:340px;object-fit:cover;object-position:50% 12%}
+.next .chip-s{display:block;margin:-24px 16px 0;position:relative;padding:12px;border-radius:10px;text-align:center;font:600 1.2rem var(--font-h);text-transform:uppercase;color:#111;background:linear-gradient(90deg,#9a9a9a,#f4f4f4 45%,#d6d6d6 60%,#9a9a9a)}
+.next .body{padding:18px 16px 20px;text-align:center}
+.next .body h3{font:600 1.7rem/1 var(--font-h);text-transform:uppercase;color:var(--accent)}
+.next .body p{margin:10px 0 16px;font-size:.92rem;color:#e5e5e5}
+
+/* кейси (відгуки) */
+.cases .cases-list{margin-top:44px}
+
+/* підтримка */
+.support{text-align:center}
+.support p{margin:12px 0 16px;font-size:.92rem;color:#e5e5e5}
+
+/* faq у стилі шаблону */
+.faq4 .list{margin-top:16px}
+.faq4 details{border-bottom:1px solid rgba(255,229,150,.25)}
+.faq4 summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 24px;gap:12px;align-items:center;padding:16px 0;font-weight:600;font-size:.95rem;line-height:1.3}
+.faq4 summary::-webkit-details-marker{display:none}
+.faq4 summary::after{content:"+";font-size:1.6rem;color:var(--accent);text-align:center;transition:transform .2s}
+.faq4 details[open] summary::after{transform:rotate(45deg)}
+.faq4 details p{padding:0 0 16px;font-size:.9rem;color:#d6d6d6}
+</style>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<!-- Google Tag Manager (той самий контейнер, що на оригінальному ленді) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-53KFVH2D');</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '692219193723921');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=692219193723921&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<div class="page">
+
+<!--HERO-->
+<div class="top">
+  <span class="chip"><i><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></i><span>Безкоштовно<small>лекція + шаблон</small></span></span>
+  <span class="chip"><i><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></i><span>Бонус<small>розбір «Zmina»</small></span></span>
+</div>
+
+<header class="hero">
+  <div class="in">
+    <span class="script">Фінансовий</span>
+    <h1 class="h c">порядок<br>у салоні</h1>
+    <span class="tagline">Безкоштовна лекція для власниць салонів</span>
+    <p class="lead">Як перестати працювати більше за своїх майстрів за менші гроші — і почати щомісяця забирати чистий прибуток.</p>
+    <a class="btn wide" href="#order" data-order>Отримати безкоштовно</a>
+    <div class="photo-card">
+      <div class="locked" data-order role="button" tabindex="0" aria-label="Відкрити доступ до лекції">
+        <video src="video/locked.mp4" poster="video/locked.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+        <span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.4"/></svg></span>
+        <span class="lock-cap">Відкрийте доступ безкоштовно</span>
+      </div>
+      <div class="meta">
+        <div><span class="name">Ольга Гончаренко</span>
+        <p class="role">Власниця б’юті-простору «ZMINA» · 3+ млн грн/міс</p></div>
+        <div class="price free-mini"><b>0 ₴</b><span>безкоштовно</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--/HERO-->
+
+<section>
+  <div class="in">
+    <div class="card ov">
+      <div class="ov-row"><span class="ov-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M8.5 11h5M11 8.5v5"/></svg></span><div><h3>Діагностика</h3><p><b>Куди зникають гроші.</b> Аутопсія вашого бізнесу і 5 фінансових вбивць, що крадуть ₴50 000+ щомісяця</p></div></div>
+      <div class="ov-row"><span class="ov-ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M8 15h2M12 15h2M8 18h8"/></svg></span><div><h3>Формула</h3><p><b>Прибуток CEO.</b> Розподіл доходу й таблиця, що показує чистий прибуток у реальному часі</p></div></div>
+      <div class="ov-row"><span class="ov-ic"><svg viewBox="0 0 24 24"><path d="M4 18l5-5 4 3 7-8"/><path d="M15 8h5v5"/></svg></span><div><h3>Ріст</h3><p><b>Масштабування без боргів.</b> 3 фінансові сигнали, що салон готовий до нової точки</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="in">
+    <div class="card gift4">
+      <span class="ribbon">Бонус</span>
+      <p>Зареєструйтесь зараз і отримайте бонусом</p>
+      <h3>Розбір стратегії росту салону «Zmina»</h3>
+      <p style="margin-bottom:12px;color:#d6d6d6;font-weight:400">3 000 000 грн/міс і рентабельність 25%+ навіть під час війни</p>
+      <div class="timer" data-countdown aria-label="До кінця акції"><div class="u"><b data-d>00</b><small>днів</small></div><i>:</i><div class="u"><b data-h>00</b><small>год</small></div><i>:</i><div class="u"><b data-m>00</b><small>хв</small></div><i>:</i><div class="u"><b data-s>00</b><small>сек</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="for">
+  <div class="in">
+    <div class="card">
+      <h2 class="h c">Ця лекція<br><span class="g">для вас, якщо:</span></h2>
+      <div class="rows">
+        <div class="row"><b>01</b><span>Платите майстрам високий %, а самі докладаєте на оренду.</span><svg viewBox="0 0 24 24"><path d="M12 3v18M16 7H10a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6H8"/></svg></div>
+        <div class="row"><b>02</b><span>Боїтеся дивитися на рахунок наприкінці місяця.</span><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg></div>
+        <div class="row"><b>03</b><span>Не знаєте, скільки насправді заробляєте.</span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6M12 17h0"/></svg></div>
+        <div class="row"><b>04</b><span>Бізнес тримається лише на вас — і ви втомились бути «мамою» для всіх.</span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg></div>
+      </div>
+      <p class="truth">Але правда в тому, що прибуток салону — це не удача, а <b>система</b>: розподіл доходу, мотивація команди й контроль цифр. Її можна побачити за 90 хвилин.</p>
+      <div class="btn-wrap"><a class="btn wide" href="#order" data-order>Отримати безкоштовно</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="in">
+    <h2 class="h c">Програма<br><span class="g">лекції</span></h2>
+    <div class="mods4">
+      <article class="mod4"><header><span class="tab">Аутопсія вашого бізнесу</span><span class="num">Модуль 1</span></header><ul><li>Чому ви багато працюєте, але мало заробляєте.</li><li>3 неочевидні причини, чому гроші «зникають» з каси.</li></ul></article>
+      <article class="mod4"><header><span class="tab">5 фінансових вбивць</span><span class="num">Модуль 2</span></header><ul><li>Пастки «Щедрої зарплати» і «Мертвого складу».</li><li>Пастки «Хорошого начальника» і «Незамінного експерта».</li><li>Пастка «Однієї послуги» — і як знешкодити кожну.</li></ul></article>
+      <article class="mod4"><header><span class="tab">Формула прибутку CEO</span><span class="num">Модуль 3</span></header><ul><li>Як рахувати гроші, щоб вони залишались у вашій кишені.</li><li>Проста формула розподілу доходу, яку ви впровадите того ж дня.</li></ul></article>
+      <article class="mod4"><header><span class="tab">Приладова панель бізнесу</span><span class="num">Модуль 4</span></header><ul><li>Контроль усіх фінансів салону за 15 хвилин на день.</li><li>Google-таблиця з чистим прибутком у реальному часі — шаблон отримаєте.</li></ul></article>
+      <article class="mod4"><header><span class="tab">Масштабування без боргів</span><span class="num">Модуль 5</span></header><ul><li>Коли насправді час рости.</li><li>3 фінансові сигнали, що бізнес готовий до нової точки чи розширення команди — без кредитів.</li></ul></article>
+    </div>
+    <div class="btn-wrap"><a class="btn wide" href="#order" data-order>Отримати безкоштовно + бонус</a></div>
+  </div>
+</section>
+
+<section class="expert">
+  <div class="in">
+    <div class="card">
+      <div class="ex-head"><img src="img/olga-blazer.webp" alt="Ольга Гончаренко" width="658" height="756" loading="lazy"><div><span class="script">Експерт</span><h2 class="h">Ольга Гончаренко</h2></div></div>
+      <p class="ex-lead">Починала як майстер — і перетворила б’юті-простір «ZMINA» з хаотичного бізнесу на систему, яка працює на неї, а не навпаки.</p>
+      <div class="today"><span class="bookmark"></span><h3>Сьогодні:</h3>
+        <ul class="ticks"><li>3+ млн грн обігу на місяць</li><li>40+ людей у команді</li><li>30+ млн грн заробила команда під час війни</li><li>Учениці з Києва, Львова, Черкас, Миколаєва</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="price">
+  <div class="in">
+    <div class="card">
+      <h2 class="h c">Участь<br><span class="g">у лекції:</span></h2>
+      <p class="intro">Лекція дасть вам розуміння, куди зникають гроші, формулу розподілу доходу й таблицю, з якою ви почнете контролювати фінанси вже завтра.</p>
+      <ul>
+        <li><b>Модуль 1:</b> аутопсія вашого бізнесу</li>
+        <li><b>Модуль 2:</b> 5 фінансових вбивць</li>
+        <li><b>Модуль 3:</b> формула прибутку CEO</li>
+        <li><b>Модуль 4:</b> приладова панель бізнесу + шаблон таблиці</li>
+        <li><b>Модуль 5:</b> масштабування без боргів і кредитів</li>
+        <li>Запис лекції — 7 днів</li>
+        <li>Подарунок: розбір стратегії росту салону «Zmina»</li>
+      </ul>
+      <div class="free"><b>Безкоштовно</b><span>лекція + шаблон таблиці · доступ одразу</span></div>
+      <a class="btn silver wide" href="#order" data-order>Забрати безкоштовно</a>
+      <p class="ps"><b>P.S.</b> Безкоштовний доступ відкритий обмежений час.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cases">
+  <div class="in">
+    <h2 class="h c">Результати<br><span class="g">учениць</span></h2>
+    <p class="sub" style="text-align:center">Що впровадили цю систему у своєму салоні</p>
+    <div class="cases-list">
+<article class="case">
+  <header><img src="img/st-olena.webp" alt="" width="56" height="56" loading="lazy"><div><h4>Олена</h4><p>перукар-колорист · Київ</p></div></header>
+  <dl>
+    <div><dt>Команда</dt><dd>6 → 10 майстрів</dd></div>
+    <div><dt>Зайнятість</dt><dd>Повністю вийшла з роботи майстра</dd></div>
+    <div><dt>Рентабельність</dt><dd class="rent">−5% → 30%</dd></div>
+    <div class="res"><dt>Дохід</dt><dd>450 000 ₴ <span>+290 000 ₴</span></dd></div>
+  </dl>
+</article>
+<article class="case">
+  <header><img src="img/st-oleksii.webp" alt="" width="56" height="56" loading="lazy"><div><h4>Олексій</h4><p>36 років · Київ</p></div></header>
+  <dl>
+    <div><dt>Команда</dt><dd>4 → 12 майстрів</dd></div>
+    <div><dt>Зайнятість</dt><dd>Керує бізнесом віддалено</dd></div>
+    <div><dt>Рентабельність</dt><dd class="rent">20% → 45%</dd></div>
+    <div class="res"><dt>Дохід</dt><dd>660 000 ₴ <span>+460 000 ₴</span></dd></div>
+  </dl>
+</article>
+<article class="case">
+  <header><img src="img/st-anastasia.webp" alt="" width="56" height="56" loading="lazy"><div><h4>Анастасія</h4><p>31 рік · Миколаїв</p></div></header>
+  <dl>
+    <div><dt>Команда</dt><dd>7 → 12 майстрів</dd></div>
+    <div><dt>Зайнятість</dt><dd>7 днів на тиждень → 2 рази</dd></div>
+    <div><dt>Рентабельність</dt><dd class="rent">15% → 35%</dd></div>
+    <div class="res"><dt>Дохід</dt><dd>660 000 ₴ <span>+210 000 ₴</span></dd></div>
+  </dl>
+</article>
+    </div>
+    <details class="more">
+      <summary>Ще 4 кейси ↓</summary>
+      <div class="cases-list">
+<article class="case">
+  <header><img src="img/st-yulia.webp" alt="" width="56" height="56"><div><h4>Юля</h4><p>29 років · Київ</p></div></header>
+  <dl>
+    <div><dt>Команда</dt><dd>3 → 14 майстрів</dd></div>
+    <div><dt>Зайнятість</dt><dd>Делегувала більшість задач</dd></div>
+    <div><dt>Рентабельність</dt><dd class="rent">15% → 35%</dd></div>
+    <div class="res"><dt>Дохід</dt><dd>750 000 ₴ <span>+400 000 ₴</span></dd></div>
+  </dl>
+</article>
+<article class="case">
+  <header><img src="img/st-mariana.webp" alt="" width="56" height="56"><div><h4>Мар’яна</h4><p>Львів</p></div></header>
+  <dl>
+    <div><dt>Команда</dt><dd>2 → 8 майстрів + SMM</dd></div>
+    <div><dt>Зайнятість</dt><dd>Вийшла з ролі майстра</dd></div>
+    <div><dt>Рентабельність</dt><dd class="rent">12% → 32%</dd></div>
+    <div class="res"><dt>Дохід</dt><dd>320 000 ₴ <span>+150 000 ₴</span></dd></div>
+  </dl>
+</article>
+<article class="case">
+  <header><img src="img/st-tania.webp" alt="" width="56" height="56"><div><h4>Таня</h4><p>28 років · Черкаси</p></div></header>
+  <dl>
+    <div><dt>Команда</dt><dd>1 → 4 майстри</dd></div>
+    <div><dt>Зайнятість</dt><dd>Структурувала процеси</dd></div>
+    <div><dt>Рентабельність</dt><dd class="rent">5% → 28%</dd></div>
+    <div class="res"><dt>Дохід</dt><dd>185 230 ₴ <span>+115 230 ₴</span></dd></div>
+  </dl>
+</article>
+<article class="case">
+  <header><img src="img/st-halyna.webp" alt="" width="56" height="56"><div><h4>Галина</h4><p>Львів</p></div></header>
+  <dl>
+    <div><dt>Команда</dt><dd>5 → 12 майстрів</dd></div>
+    <div><dt>Зайнятість</dt><dd>Делегувала бізнес-процеси</dd></div>
+    <div><dt>Рентабельність</dt><dd class="rent">18% → 33%</dd></div>
+    <div class="res"><dt>Дохід</dt><dd>485 000 ₴ <span>+85 000 ₴</span></dd></div>
+  </dl>
+</article>
+      </div>
+    </details>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div>Ольга Гончаренко ✦ Фінансовий порядок ✦ прибуток, а не хаос ✦ Ольга Гончаренко ✦ Фінансовий порядок ✦ прибуток, а не хаос ✦ Ольга Гончаренко ✦ Фінансовий порядок ✦ прибуток, а не хаос ✦ Ольга Гончаренко ✦ Фінансовий порядок ✦ прибуток, а не хаос ✦ </div></div>
+
+<section class="idea">
+  <div class="in">
+    <h2 class="h c">Прибуток = система,<br><span class="g">а не більше клієнтів</span></h2>
+    <ul class="story4">
+      <li>Кожен власник може записати більше клієнтів і збільшити оборот.</li>
+      <li>Але прибуток — це не оборот, а система: відсотки майстрам, склад, плани продажів і контроль цифр.</li>
+      <li>Коли ви це бачите, гроші перестають «зникати» з каси.</li>
+    </ul>
+    <div class="card cmp">
+      <dl>
+        <div><dt>Майстер-власник</dt><dd>клієнт → клієнт → клієнт</dd></div>
+        <div><dt>CEO</dt><dd>цифри → розподіл → контроль</dd></div>
+        <div><dt>Результат</dt><dd>чистий прибуток, а не оборот</dd></div>
+      </dl>
+      <div class="arrow"><span>➜</span><div><b>План на 30 днів</b><small>за ним ви вперше побачите чистий прибуток</small></div></div>
+      <div class="btn-wrap"><a class="btn wide" href="#order" data-order>Отримати безкоштовно + бонус</a></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="support">
+  <div class="in">
+    <div class="card">
+      <h2 class="h c">Залишились<br><span class="g">питання?</span></h2>
+      <p>Напишіть у техпідтримку — швидко допоможемо з доступом.</p>
+      <a class="btn wide" href="mailto:info.goncharenkoo@gmail.com">Написати в підтримку</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq4">
+  <div class="in">
+    <div class="ct"><span class="script">Питання</span><h2 class="h c">Часті запитання</h2></div>
+    <div class="list">
+      <details><summary>Як отримати доступ до лекції?</summary><p>Залиште ім’я й телефон — посилання на вхід отримаєте одразу, це закритий Telegram-канал лекції.</p></details>
+<details><summary>Скільки триває лекція?</summary><p>Приблизно 90 хвилин концентрованої, структурованої інформації без «води».</p></details>
+<details><summary>Чи буде запис?</summary><p>Так, запис буде доступний 7 днів.</p></details>
+      <details><summary>Підійде, якщо в мене 1–3 майстри?</summary><p>Так. Система не залежить від розміру салону — серед учениць є Таня з Черкас, яка виросла з 1 до 4 майстрів і підняла рентабельність з 5% до 28%.</p></details>
+      <details><summary>Я не розуміюся на цифрах. Зрозумію?</summary><p>Так. Усе покажу на простій Google-таблиці, шаблон отримаєте. Контроль фінансів — 15 хвилин на день.</p></details>
+      <details><summary>Це справді безкоштовно?</summary><p>Так. Лекція, шаблон таблиці фінансів і бонус-розбір «Zmina» — безкоштовні. Достатньо залишити ім’я й телефон.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <p><b>Техпідтримка:</b> <a href="mailto:info.goncharenkoo@gmail.com">info.goncharenkoo@gmail.com</a></p>
+  <p>65059 Україна, Одеська обл., м. Одеса, Люстдорфська дорога, 52</p>
+  <p><a href="https://docs.google.com/document/d/1c2uTeGv-R1-mEwE0ATmOFJX7v--sv085p8x0TMqUFkY/edit?usp=sharing" target="_blank" rel="noopener">Політика конфіденційності</a> · <a href="https://docs.google.com/document/d/1vBvJbn3PtDNR4g0B_FI8pD4bjuF981UL9b78jvgkB04/edit?usp=sharing" target="_blank" rel="noopener">Договір публічної оферти</a></p>
+  <p>© olga-goncharenko.com.ua</p>
+</footer>
+
+</div>
+
+<div class="sticky-cta"><a class="btn" href="#order" data-order>Отримати безкоштовно</a></div>
+<dialog class="order" id="order" aria-labelledby="order-t">
+  <div class="order-in">
+    <button class="x" type="button" data-close aria-label="Закрити">×</button>
+    <h3 id="order-t">Безкоштовний доступ</h3>
+    <p class="when">Лекція «Фінансовий порядок» · Ольга Гончаренко</p>
+    <div class="free"><b>Безкоштовно</b><span>лекція + шаблон таблиці фінансів</span></div>
+    <div class="timer" data-countdown aria-label="Безкоштовний доступ закриється через"><div class="u"><b data-d>00</b><small>днів</small></div><i>:</i><div class="u"><b data-h>00</b><small>год</small></div><i>:</i><div class="u"><b data-m>00</b><small>хв</small></div><i>:</i><div class="u"><b data-s>00</b><small>сек</small></div></div>
+    <form action="https://mgw.bz/olga-goncharenko" method="post" novalidate>
+      <label>Ваше ім’я<input type="text" name="name" autocomplete="given-name" placeholder="Ваше ім’я" required></label>
+      <label>Телефон<input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="+38 (000) 000-00-00" required></label>
+      <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="utm_content">
+      <p class="f-err" role="alert" hidden></p>
+      <button class="btn wide" type="submit">Отримати доступ</button>
+    </form>
+    <p class="gift-line">🎁 + бонус: розбір стратегії росту салону «Zmina»</p>
+    <p class="note">Посилання на лекцію отримаєте одразу після реєстрації. Ваші дані конфіденційні та потрібні лише для зв’язку з менеджером.</p>
+  </div>
+</dialog>
+<script src="app.js" defer></script>
+</body>
+</html>

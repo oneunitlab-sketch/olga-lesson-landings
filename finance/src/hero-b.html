@@ -1,0 +1,41 @@
+<style>
+/* B — «Цифра-шок»: 50 000+ грн втрат, 5 пасток, маленьке закрите відео */
+.hb{padding:18px 0 10px;text-align:center}
+.hb-tag{display:inline-block;padding:6px 14px;border-radius:999px;border:1px solid #f5d670;font:600 .8rem var(--font-h);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hb-num{margin-top:14px;white-space:nowrap;font:600 min(16.5vw,76px)/1 var(--font-h);letter-spacing:-.01em;background:linear-gradient(120deg,#f2d160,#ffe596 49%,#f2d160);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hb-num small{display:block;margin-top:4px;font-size:.42em;letter-spacing:.02em;background:linear-gradient(131deg,#979797 0%,#fff 14%,#e3e3e3 51%,#fff 85%,#999 100%);-webkit-background-clip:text;background-clip:text}
+.hb h1{margin-top:10px;font:600 1.05rem/1.35 var(--font-b);text-transform:none;letter-spacing:0;color:#fff;max-width:30ch;margin-inline:auto}
+.hb h1 b{color:var(--accent)}
+.hb-traps{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:16px}
+.hb-traps span{padding:6px 10px;border-radius:21px;background:#2b2b2b;border:.5px solid rgba(255,229,150,.4);font-size:.8rem;font-weight:600}
+.hb-traps span::before{content:"✕ ";color:#e85059;font-weight:800}
+.hb-card{display:grid;grid-template-columns:44% 1fr;margin-top:20px;border-radius:14px;overflow:hidden;border:.5px solid rgba(255,229,150,.45);background:#1b1b1b;text-align:left}
+.hb-card .locked{aspect-ratio:auto;height:100%;min-height:150px}
+.hb-card .lock{width:58px;height:58px;margin:-29px 0 0 -29px;top:50%}
+.hb-card .lock svg{width:26px;height:26px}
+.hb-card .body{padding:14px}
+.hb-card .body b{display:block;font:600 1.15rem/1.1 var(--font-h);text-transform:uppercase}
+.hb-card .body p{margin-top:6px;font-size:.84rem;color:#d6d6d6;line-height:1.35}
+.hb-card .body .pr{margin-top:10px;font:600 1.9rem/1 var(--font-h);color:#ffe596}
+.hb-card .body .pr s{font-size:.95rem;color:#bdbdbd;text-decoration-color:#e22836;margin-left:6px}
+.hb .btn{margin-top:16px}
+.hb-by{margin-top:12px;font-size:.82rem;color:#cfcfcf}
+.hb-by b{color:#fff}
+</style>
+<header class="hero hb">
+  <div class="in">
+    <span class="hb-tag">Лекція для власниць салонів краси</span>
+    <div class="hb-num">50 000+ грн<small>щомісяця</small></div>
+    <h1>Стільки втрачає середній салон через <b>5 фінансових пасток</b>. На лекції покажу, як закрити кожну й почати забирати чистий прибуток.</h1>
+    <div class="hb-traps"><span>Щедра зарплата</span><span>Мертвий склад</span><span>Хороший начальник</span><span>Незамінний експерт</span><span>Одна послуга</span></div>
+    <div class="hb-card">
+      <div class="locked" data-order role="button" tabindex="0" aria-label="Відкрити доступ до лекції">
+        <video src="video/locked.mp4" poster="video/locked.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+        <span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.4"/></svg></span>
+      </div>
+      <div class="body"><b>Фінансовий порядок</b><p>5 модулів + шаблон таблиці фінансів і подарунок</p><div class="pr">379 грн<s>2000</s></div></div>
+    </div>
+    <a class="btn wide" href="#order" data-order>Закрити пастки за 379 грн</a>
+    <p class="hb-by">Веде <b>Ольга Гончаренко</b> — власниця «ZMINA», 3+ млн грн/міс</p>
+  </div>
+</header>

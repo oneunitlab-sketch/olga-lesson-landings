@@ -1,0 +1,51 @@
+/* Тема «Шампань» поверх v4: світлий кремовий фон, графітові заголовки, золото й чорні кнопки */
+:root{--ink:#1d1812;--muted:#6b6255;--accent:#9a6a12;--line:rgba(154,106,18,.3);
+  --cta:linear-gradient(90deg,#1d1812,#3a3024 50%,#1d1812);--cta-ink:#f7e3a6;--cta-shadow:0 2px .5px #000;
+  --timer-bg:#1d1812;--timer-ink:#f7e3a6;--sticky-bg:rgba(246,241,231,.94)}
+html,body{background:#e9e0cf}
+body{color:var(--ink)}
+.page{background:#f6f1e7;box-shadow:0 0 0 1px #e1d6c1}
+.h{background:linear-gradient(131deg,#3b3b3b 0%,#111 30%,#4a4a4a 60%,#111 100%);-webkit-background-clip:text;background-clip:text}
+.h .g,.g,.script,.price4 b{background:linear-gradient(120deg,#9a6a12,#c9952f 50%,#9a6a12);-webkit-background-clip:text;background-clip:text}
+.card{background:#fffaf0;border-color:rgba(154,106,18,.35);box-shadow:0 10px 30px rgba(80,60,20,.08)}
+.chip{background:#fffaf0;border-color:rgba(154,106,18,.35);color:var(--ink)}
+.chip small{color:#6b6255}
+.tagline{border-color:#c9952f;color:#8a5e10}
+.hero .lead,.ov-row p,.ex-lead,.part .intro,.ps,.cmp .arrow small,.support p,.faq4 details p,.sub,.txt,.case header p{color:#4a4238}
+.ov-row p b,.part li b,.cmp dd{color:#1d1812}
+.cmp dt{color:#8a8070}
+.row{background:#f1e8d6}
+.row b{color:#9a6a12}
+.row svg{stroke:#6b6255}
+.truth b{color:#9a6a12}
+.mod4{background:#fffaf0;border-color:rgba(154,106,18,.35)}
+.mod4 .num{color:#9a6a12}
+.mod4 li::before,.part li::before,.story4 li::before,.truth::before,.truth::after{color:#c9952f}
+.today{background:linear-gradient(160deg,#f3e3bd,#fffaf0 70%);border-color:rgba(154,106,18,.45)}
+.today .ticks li{border-top-color:rgba(154,106,18,.2)}
+.photo-card{background:#1d1812;border-color:rgba(154,106,18,.35)}
+.photo-card .meta{background:#1d1812;color:#f6f1e7}
+.photo-card .price b{color:#f7e3a6}
+.case{background:#fffaf0}
+.case dt{color:#9a6a12}
+.case dd{color:#1d1812}
+.case .res dd,.case .res dt{color:#000}
+.more summary{color:#8a5e10;border-color:#c9952f}
+.gift4 h3{color:#8a5e10}
+.gift4 p{color:#4a4238!important}
+.gift4 .timer b{background:#1d1812;color:#f7e3a6}
+.timer small{color:#6b6255}
+.timer i{color:#8a8070}
+.marquee{background:#1d1812;color:#f7e3a6}
+.ov-ic{box-shadow:0 2px .5px #000}
+.faq4 details{border-bottom-color:rgba(154,106,18,.25)}
+.faq4 summary::after{color:#9a6a12}
+.foot{background:#ece3d1;color:#6b6255}
+.foot a{color:#1d1812}
+.pay-logos{color:#4a4238}
+.pl-visa{color:#1a1f71}
+dialog.order{background:#fffaf0;color:#1d1812;--muted:#6b6255}
+.order .price b{color:#9a6a12}
+.sticky-cta{border-top-color:#e1d6c1}
+.locked .lock-cap{color:#fff}
+.free span{color:#4a4238}

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="uk" data-lp="v2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Скільки втрачає ваш салон? — лекція Ольги Гончаренко</title>
+<meta name="description" content="Лекція «Фінансовий порядок». Порахуйте, скільки грошей щомісяця витікає з вашого салону, і дізнайтесь, як їх повернути. 379 грн замість 2000.">
+<meta property="og:title" content="Скільки грошей ваш салон втрачає щомісяця?">
+<meta property="og:description" content="Лекція Ольги Гончаренко «Фінансовий порядок» · 379 грн замість 2000">
+<meta property="og:image" content="img/d-hero.webp">
+<meta name="theme-color" content="#101010">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="olga.css">
+{{HEAD}}
+</head>
+<body>
+<div class="page">
+
+<header class="hero">
+  <div class="hero-chips"><span class="live">лекція «Фінансовий порядок»</span><span class="when"><b>379 грн</b> замість 2000</span></div>
+  <div class="hero-photo"><img src="img/d-hero.webp" alt="Ольга Гончаренко" width="640" height="1140" fetchpriority="high"></div>
+  <div class="in">
+    <span class="pill">Власниця салону «ZMINA» · 3+ млн грн/міс</span>
+    <h1 class="h c">Скільки грошей<br>ваш салон <span class="g">втрачає<br>щомісяця?</span></h1>
+    <p class="lead">Лекція «Фінансовий порядок». За 90 хвилин покажу, <b class="gold-b">куди зникають гроші салону</b> і як щомісяця забирати чистий прибуток — на прикладі мого салону з обігом 3+ млн грн/міс.</p>
+    <div class="price-row"><div class="price-main"><small>Ціна сьогодні</small><b>379 грн</b></div><span class="price-old">2000 грн</span></div>
+    <div class="btn-wrap"><a class="btn" href="#order" data-order>Забронювати місце</a><img class="badge80" src="img/d-badge80.webp" alt="" width="146" height="146"></div>
+    <a class="skip" href="#calc">або спершу порахуйте свої втрати ↓</a>
+    <p class="label t-label">До кінця акції залишилося</p>
+    {{TIMER}}
+    <div class="hero-gift"><img src="img/d-giftsticker.webp" alt="" width="77" height="77"><span>Оплата сьогодні — <b class="gold-b">подарунок:</b> розбір стратегії росту салону «Zmina», що вийшов на 3 000 000 грн/міс із рентабельністю 25%+.</span></div>
+  </div>
+</header>
+
+<section class="calc" id="calc">
+  <img class="chain" src="img/d-chain.webp" alt="" width="638" height="466" loading="lazy">
+  <div class="in">
+    <h2 class="h">Порахуйте,<br>скільки <span class="g">ви втрачаєте</span></h2>
+    <p class="sub">Це не ваша провина — це пастки. Відмітьте ті, що є у вашому салоні.</p>
+    <div class="calc-box">
+      <div class="calc-step"><i>1</i>Оборот салону на місяць</div>
+      <div class="presets" role="group" aria-label="Оборот на місяць">
+        <button type="button" data-rev="150000" aria-pressed="false">до 200 тис.</button>
+        <button type="button" data-rev="350000" aria-pressed="true">200–500 тис.</button>
+        <button type="button" data-rev="750000" aria-pressed="false">500 тис. – 1 млн</button>
+        <button type="button" data-rev="1500000" aria-pressed="false">1 млн+</button>
+      </div>
+      <div class="rev">
+        <label for="rev">Точніше: <output id="revOut">350 000 грн</output></label>
+        <input id="rev" type="range" min="50000" max="3000000" step="10000" value="350000">
+      </div>
+
+      <div class="calc-step" style="margin-top:24px"><i>2</i>Які пастки ви впізнаєте?</div>
+      <div class="traps" style="margin-top:0">
+        <label class="trap"><span class="tag">Пастка «Щедрої зарплати»</span><input type="checkbox" data-leak="0.05" aria-label="Пастка щедрої зарплати"><p>Майстрам — високий %, а вам доводиться докладати на оренду й закупівлі з власної кишені.</p><em data-out></em></label>
+        <label class="trap"><span class="tag">Пастка «Мертвого складу»</span><input type="checkbox" data-leak="0.02" aria-label="Пастка мертвого складу"><p>Полиці з косметикою, яку ніхто не купує. Заморожені гроші замість прибутку.</p><em data-out></em></label>
+        <label class="trap"><span class="tag">Пастка «Хорошого начальника»</span><input type="checkbox" data-leak="0.03" aria-label="Пастка хорошого начальника"><p>Немає планів продажів, бо «не хочу тиснути». За результат відповідаєте лише ви.</p><em data-out></em></label>
+        <label class="trap"><span class="tag">Пастка «Незамінного експерта»</span><input type="checkbox" data-leak="0.03" aria-label="Пастка незамінного експерта"><p>Найкращі майстри йдуть, забираючи клієнтів, — і ви знову латаєте «дірки» в розкладі.</p><em data-out></em></label>
+        <label class="trap"><span class="tag">Пастка «Однієї послуги»</span><input type="checkbox" data-leak="0.04" aria-label="Пастка однієї послуги"><p>Клієнт прийшов на манікюр і пішов: ніхто не запропонував догляд чи наступний запис.</p><em data-out></em></label>
+      </div>
+
+      <div class="result is-zero" id="result" aria-live="polite">
+        <p class="zero">Відмітьте пастки, які впізнаєте, — і побачите, скільки грошей щомісяця недоотримує ваш салон.</p>
+        <div class="has">
+          <p class="label">Ваш салон недоотримує орієнтовно</p>
+          <div class="sum h c" id="sum">0 грн</div>
+          <p class="per" id="year"></p>
+          <p class="cmp" id="cmp"></p>
+        </div>
+        <a class="btn" href="#order" data-order id="calcBtn">Як повернути ці гроші — 379 грн</a>
+      </div>
+      <p class="disc">Оцінка орієнтовна: типові втрати салону у % від обороту. Точні цифри саме вашого бізнесу порахуєте на лекції за шаблоном.</p>
+    </div>
+  </div>
+</section>
+
+<section class="who">
+  <div class="rays"></div>
+  <img class="ring" src="img/d-ring-top.webp" alt="" width="348" height="282" loading="lazy">
+  <div class="in">
+    <h2 class="h">Кому потрібно бути<br>на лекції <span class="g">ще вчора</span></h2>
+    <ol>
+      <li><b>Втомилися бути «мамою» для всіх</b><span>Для команди, клієнтів, постачальників — але не відчуваєте себе власником.</span></li>
+      <li><b>Боїтеся дивитися на банківський рахунок</b><span>Наприкінці місяця, бо там знову нуль або мінус.</span></li>
+      <li><b>Не знаєте, скільки насправді заробляєте</b><span>Фінанси — це зошит, нотатки в телефоні й цифри в голові.</span></li>
+      <li><b>Хочете підняти ціни, але боїтеся втратити клієнтів</b><span>А підняти зарплату команді — боїтеся збанкрутувати.</span></li>
+      <li><b>Мрієте про масштабування</b><span>Але думка про другу точку викликає паніку, бо бізнес тримається лише на вас.</span></li>
+      <li><b>Досягли «скляної стелі»</b><span>І не розумієте, як пробити планку прибутку в 50, 100 чи 200 тис. грн на місяць.</span></li>
+    </ol>
+    <div class="btn-wrap"><a class="btn" href="#order" data-order>Хочу цю систему!</a></div>
+  </div>
+</section>
+
+<section class="prog">
+  <div class="in">
+    <h2 class="h">Що розберемо<br><span class="g r">за 90 хвилин</span></h2>
+    <div class="list">
+      <details open><summary><span><small>Модуль 1.</small><b>Аутопсія вашого бізнесу</b></span></summary><p>Чому ви багато працюєте, але мало заробляєте? 3 неочевидні причини, чому гроші «зникають» з каси.</p></details>
+      <details><summary><span><small>Модуль 2.</small><b>5 фінансових вбивць</b></span></summary><p>Детальний розбір пасток із калькулятора вище — і як знешкодити кожну.</p></details>
+      <details><summary><span><small>Модуль 3.</small><b>Формула прибутку CEO</b></span></summary><p>Проста формула розподілу доходу, яку ви впровадите того ж дня, щоб гроші лишались у вашій кишені.</p></details>
+      <details><summary><span><small>Модуль 4.</small><b>Приладова панель вашого бізнесу</b></span></summary><p>Як за 15 хвилин на день контролювати всі фінанси салону в простій таблиці. Шаблон отримаєте.</p></details>
+      <details><summary><span><small>Модуль 5.</small><b>Масштабування без боргів і кредитів</b></span></summary><p>3 фінансові сигнали, що бізнес готовий до нової точки чи розширення команди.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="after" style="padding-top:10px">
+  <div class="in">
+    <h2 class="h">З чим ви підете<br><span class="g r">з лекції</span></h2>
+    <div class="plan">
+      <div class="plan-item"><div><h3>Список «чорних дір»</h3><p>3–5 місць, куди зараз витікає прибуток вашого салону, — і що з ними зробити.</p></div></div>
+      <div class="plan-item"><div><h3>Таблиця фінансів</h3><p>Проста Google-таблиця, що показує чистий прибуток у реальному часі. Покажу, як нею користуватися.</p></div></div>
+      <div class="plan-item"><div><h3>Мотивація команди</h3><p>Система, за якої майстрам вигідний прибуток салону, а не лише їхній відсоток.</p></div></div>
+      <div class="plan-item"><div><h3>План на 30 днів</h3><p>За ним ви вперше побачите свій чистий прибуток і зможете вивести першу частину на себе.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="diff" style="padding-top:20px">
+  <div class="in">
+    <h2 class="h">Це не чергова<br><span class="g r">лекція.</span></h2>
+    <p class="sub" style="color:#fff">Це операція з поліпшення фінансового здоров’я вашого бізнесу</p>
+    <div class="vs">
+      <div class="no"><h3>Нудні лекції від «теоретиків»</h3><ul><li>Загальні поради, які не працюють у б’юті-ніші</li><li>Вас вчать «збільшувати рентабельність» (що б це не значило)</li><li>Спікери, які ніколи не платили оренду й зарплати з власної кишені</li><li>Після лекції в голові каша й жодного плану</li></ul></div>
+      <div class="yes"><img class="cursor" src="img/d-cursor.webp" alt="" width="174" height="137" loading="lazy"><h3>Моя система «Фінансовий порядок»</h3><ul><li><b>Реальні інструменти</b> з мого салону з обігом 3+ млн/міс</li><li>Покажу, <b>як забирати чистий прибуток</b> і куди його реінвестувати</li><li><b>Мій досвід +30 млн грн під час війни</b> — працює в будь-яких умовах</li><li>Ви підете з <b>покроковим планом на 30 днів</b> і шаблонами</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="in">
+    <div class="about-head">
+      <img class="about-photo" src="img/olga-gold.webp" alt="Ольга Гончаренко" width="640" height="1606" loading="lazy">
+      <h2 class="h">Хто я<br>і чому мені<br><span class="g">варто<br>довіряти?</span></h2>
+      <p class="sub">Я — Ольга Гончаренко. І я не теоретик, а практик.</p>
+    </div>
+    <ul class="facts">
+      <li>Я починала як майстер, який мріяв про власний успішний бізнес.</li>
+      <li>Створила б’юті-простір «ZMINA» і перетворила його на систему з обігом 3+ млн грн на місяць і командою 40+ людей.</li>
+      <li>Під час війни, коли інші закривались, моя команда заробила понад 30 млн грн.</li>
+      <li>Я не просто «власниця салону». Я — CEO бізнесу, що працює на мене, а не навпаки.</li>
+    </ul>
+    <div class="btn-wrap"><a class="btn" href="#order" data-order>Забронювати місце</a></div>
+  </div>
+</section>
+
+<section class="cases">
+  <div class="in">
+    <h2 class="h">Результати<br><span class="g r">моїх учениць</span></h2>
+    <p class="sub">Що впровадили цю систему у своєму салоні</p>
+    <div class="cases-list">
+{{CASES_TOP}}
+    </div>
+    <details class="more">
+      <summary>Ще 4 кейси ↓</summary>
+      <div class="cases-list">
+{{CASES_REST}}
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="final" id="price">
+  <img class="rocket" src="img/d-rocket.webp" alt="" width="638" height="1400" loading="lazy">
+  <div class="in">
+    <h2 class="h" style="text-align:left">Ваша точка<br><span class="g">неповернення</span></h2>
+    <p class="txt" style="text-align:left">Можна й далі працювати в хаосі, сподіваючись, що <b>«колись стане краще»</b>.</p>
+    <div class="offer">
+      <p class="label">Або ви можете інвестувати</p>
+      <div class="big h c">379 грн</div>
+      <p>ціну двох чашок кави з десертом — у систему, здатну приносити десятки тисяч гривень прибутку щомісяця.</p>
+    </div>
+    <div class="gift">
+      <img class="sticker" src="img/d-giftsticker.webp" alt="" width="77" height="77">
+      <h3 class="h c">Оплатіть сьогодні<br>й отримайте подарунок</h3>
+      <img class="prev" src="img/gift-zmina.webp" alt="Розбір стратегії салону Zmina" width="456" height="254" loading="lazy">
+      <p>Детальна стратегія росту салону «Zmina», який вийшов на дохід понад <b>3 000 000 грн/міс</b> зі стабільною <b>рентабельністю 25%+</b> навіть під час війни.</p>
+    </div>
+    <p class="label t-label">Після завершення акції ціна зросте до&nbsp;2000&nbsp;грн</p>
+    {{TIMER}}
+    <div class="btn-wrap"><a class="btn" href="#order" data-order>Забрати свій квиток</a><img class="tickets" src="img/d-tickets.webp" alt="" width="184" height="184" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="in">
+    <h2 class="h">Відповіді<br>на часті <span class="g">запитання</span></h2>
+    <div class="list">
+      {{FAQ}}
+      <details><summary>Підійде, якщо в мене 1–3 майстри?</summary><p>Так. Система не залежить від розміру салону — серед учениць є Таня з Черкас, яка виросла з 1 до 4 майстрів і підняла рентабельність з 5% до 28%.</p></details>
+      <details><summary>Я не розуміюся на цифрах. Зрозумію?</summary><p>Так. Усе покажу на простій Google-таблиці, шаблон отримаєте. Контроль фінансів — 15 хвилин на день.</p></details>
+            <details><summary>Як оплатити?</summary><p>Карткою Visa або Mastercard на захищеній сторінці оплати. Посилання на вхід отримаєте одразу після оплати.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  {{PAY}}
+  <p><b>Техпідтримка:</b> <a href="mailto:info.goncharenkoo@gmail.com">info.goncharenkoo@gmail.com</a></p>
+  <p>65059 Україна, Одеська обл., м. Одеса, Люстдорфська дорога, 52</p>
+  <p><a href="https://docs.google.com/document/d/1c2uTeGv-R1-mEwE0ATmOFJX7v--sv085p8x0TMqUFkY/edit?usp=sharing" target="_blank" rel="noopener">Політика конфіденційності</a> · <a href="https://docs.google.com/document/d/1vBvJbn3PtDNR4g0B_FI8pD4bjuF981UL9b78jvgkB04/edit?usp=sharing" target="_blank" rel="noopener">Договір публічної оферти</a></p>
+  <p>© olga-goncharenko.com.ua</p>
+</footer>
+
+</div>
+
+<div class="sticky-cta"><a class="btn" href="#order" data-order>Забронювати за 379 грн</a></div>
+{{MODAL}}
+<script>
+// калькулятор втрат: % від обороту для кожної позначеної пастки
+(function () {
+  var rev = document.getElementById('rev'), revOut = document.getElementById('revOut');
+  var presets = [].slice.call(document.querySelectorAll('[data-rev]'));
+  var bands = [[0, 200000], [200000, 500000], [500000, 1000000], [1000000, Infinity]];
+  var boxes = [].slice.call(document.querySelectorAll('.trap input'));
+  var sum = document.getElementById('sum'), year = document.getElementById('year'), cmp = document.getElementById('cmp');
+  var result = document.getElementById('result'), btn = document.getElementById('calcBtn');
+  var round = function (n) { return Math.round(n / 1000) * 1000; };
+  var money = function (n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' грн'; };
+  function calc() {
+    var r = +rev.value, total = 0;
+    revOut.textContent = money(r);
+    presets.forEach(function (p, i) { p.setAttribute('aria-pressed', r >= bands[i][0] && r < bands[i][1] ? 'true' : 'false'); });
+    boxes.forEach(function (b) {
+      var v = round(r * +b.dataset.leak);
+      b.closest('.trap').querySelector('[data-out]').textContent = b.checked ? '−' + money(v) + ' щомісяця' : 'до ' + money(v) + ' на місяць';
+      if (b.checked) total += v;
+    });
+    sum.textContent = money(total);
+    year.textContent = 'щомісяця · ≈ ' + money(total * 12) + ' на рік';
+    if (total) {
+      var pct = 379 / total * 100;
+      cmp.innerHTML = 'Лекція коштує <b>379 грн</b> — це <b>' + (pct < 1 ? 'менше 1%' : Math.round(pct) + '%') + '</b> від однієї місячної втрати.';
+      btn.textContent = 'Як повернути ' + money(total) + ' — 379 грн';
+    }
+    result.classList.toggle('is-zero', total === 0);
+  }
+  presets.forEach(function (p) { p.addEventListener('click', function () { rev.value = p.dataset.rev; calc(); }); });
+  rev.addEventListener('input', calc);
+  boxes.forEach(function (b) { b.addEventListener('change', calc); });
+  calc();
+})();
+</script>
+<script src="app.js" defer></script>
+</body>
+</html>

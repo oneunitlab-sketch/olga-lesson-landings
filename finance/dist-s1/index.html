@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="uk" data-lp="s1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Фінансовий порядок у салоні — лекція Ольги Гончаренко</title>
+<meta name="description" content="Лекція «Фінансовий порядок» для власниць салонів краси. Куди зникають гроші і як щомісяця забирати чистий прибуток. Безкоштовно.">
+<meta property="og:title" content="Фінансовий порядок у салоні — лекція Ольги Гончаренко">
+<meta property="og:description" content="Безкоштовна лекція для власниць салонів краси">
+<meta property="og:image" content="video/locked.jpg">
+<meta name="theme-color" content="#101010">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Montserrat:wght@400;500;600;700;800&family=Marck+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="olga.css">
+<style>
+/* Короткий ленд: заголовок → підзаголовок → закрите відео → кнопка (схема olga-lesson-short, стиль v4) */
+.in{padding:0 18px}
+section{padding:30px 0}
+.script{display:block;font-family:'Marck Script',cursive;font-weight:400;text-transform:none;white-space:nowrap;font-size:min(13.5vw,60px);line-height:.95;margin-bottom:2px;background:linear-gradient(120deg,#f2d160,#ffe596 49%,#f2d160);-webkit-background-clip:text;background-clip:text;color:transparent}
+.h{line-height:1.08}
+.tag{display:inline-block;padding:7px 14px;border-radius:999px;background:linear-gradient(90deg,#f5d670,#ffe596,#f5d670);color:#15100a;font:700 .76rem var(--font-b);letter-spacing:.06em;text-transform:uppercase}
+
+/* hero */
+.hero{padding:22px 0 18px;text-align:center}
+.hero .tag{margin-bottom:16px}
+.vid{position:relative;display:block;margin-top:20px;aspect-ratio:16/10;border-radius:16px;overflow:hidden;cursor:pointer;border:.5px solid rgba(255,229,150,.5);background:#111;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.vid video{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}
+.vid::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(16,16,16,.1),rgba(16,16,16,.6))}
+.vid .lock{position:absolute;left:50%;top:44%;z-index:1;display:grid;place-items:center;width:74px;height:74px;margin:-37px 0 0 -37px;border-radius:50%;background:var(--gold);animation:lockPulse 1.8s ease-out infinite}
+.vid .lock svg{width:34px;height:34px;fill:none;stroke:#111;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vid .cap{position:absolute;left:0;right:0;top:calc(44% + 48px);z-index:1;font:600 .8rem var(--font-b);text-transform:uppercase;letter-spacing:.04em}
+.vid .badge{position:absolute;top:12px;left:12px;z-index:1;padding:5px 10px;border-radius:999px;background:rgba(16,16,16,.75);border:.5px solid rgba(255,229,150,.5);font-size:.76rem;font-weight:700}
+.vid .badge b{color:var(--accent)}
+@keyframes lockPulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,229,150,.55)}60%{transform:scale(1.07);box-shadow:0 0 0 20px rgba(255,229,150,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,229,150,0)}}
+@media (prefers-reduced-motion:reduce){.vid .lock{animation:none}}
+
+/* золота кнопка зі стрілкою */
+.gbtn{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;min-height:68px;margin-top:16px;padding:0 10px 0 22px;border-radius:16px;background:linear-gradient(90deg,#f5d670,#ffe596 50%,#f5d670);color:#15100a;font:700 1.08rem var(--font-b);text-decoration:none;text-align:left;box-shadow:0 2px .5px #8a6a1e,0 14px 30px rgba(0,0,0,.35);transition:transform .15s ease}
+.gbtn:active{transform:translateY(1px)}
+.gbtn small{display:block;font-size:.8rem;font-weight:600;color:#5a4612}
+.gbtn i{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:50%;background:#15100a;color:#ffe596;font-style:normal;font-size:1.3rem}
+.hint{margin-top:10px;font-size:.84rem;color:#bdbdbd;text-align:center}
+.price-line{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:18px}
+.price-line b{font:600 2.2rem/1 var(--font-h);color:#ffe596}
+.price-line s{font:600 1.05rem var(--font-h);color:#bdbdbd;text-decoration-color:#e22836}
+.price-line em{padding:4px 9px;border-radius:999px;background:var(--cta);font-style:normal;font-weight:800;font-size:.8rem;color:#fff}
+
+/* про що */
+.about-l h2,.inside h2{font-size:min(9.5vw,40px)}
+.pts{list-style:none;padding:0;margin-top:16px;counter-reset:p}
+.pts li{display:grid;grid-template-columns:44px 1fr;gap:4px 12px;padding:16px 0;border-top:1px solid rgba(255,229,150,.2)}
+.pts li:last-child{border-bottom:1px solid rgba(255,229,150,.2)}
+.pts li::before{content:counter(p,decimal-leading-zero);counter-increment:p;grid-row:span 2;font:600 1.6rem/1 var(--font-h);color:var(--accent)}
+.pts b{font-size:1.02rem}
+.pts span{font-size:.9rem;color:#d6d6d6;line-height:1.35}
+
+/* що всередині — свайп */
+.swipe-hint{margin-top:6px;font-size:.84rem;color:#bdbdbd}
+.rail2{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:16px -18px 0;padding:0 18px 6px;scrollbar-width:none}
+.rail2::-webkit-scrollbar{display:none}
+.rail2 article{scroll-snap-align:start;padding:18px 16px;border-radius:16px;background:linear-gradient(180deg,#1f1f1f,#151515);border:.5px solid rgba(255,229,150,.45)}
+.rail2 h3{font:600 1.15rem/1.15 var(--font-h);text-transform:uppercase;margin-bottom:12px}
+.rail2 ul{list-style:none;padding:0;display:grid;gap:9px}
+.rail2 li{position:relative;padding-left:18px;font-size:.9rem;line-height:1.35;color:#e5e5e5}
+.rail2 li::before{content:"";position:absolute;left:2px;top:.5em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* авторка */
+.author2{overflow:hidden;border-radius:16px;border:.5px solid rgba(255,229,150,.45);background:#151515}
+.author2 img{width:100%;height:300px;object-fit:cover;object-position:50% 12%}
+.author2 .b{padding:16px}
+.author2 small{font-size:.8rem;color:#bdbdbd}
+.author2 h3{font:600 1.5rem var(--font-h);text-transform:uppercase}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,229,150,.2)}
+.stats b{display:block;font:600 1.4rem/1 var(--font-h);color:var(--accent)}
+.stats span{display:block;margin-top:4px;font-size:.78rem;line-height:1.3;color:#d6d6d6}
+
+
+/* результати учениць замість блоку авторки */
+.proof2 h2{font-size:min(9.5vw,40px)}
+.rail2.mini{grid-auto-columns:72%}
+.mc{display:grid;gap:10px;align-content:start}
+.mc header{display:flex;gap:10px;align-items:center}
+.mc header img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1.5px solid #ffe596}
+.mc header b{display:block;font-size:1rem}
+.mc header span{font-size:.8rem;color:#bdbdbd}
+.mc .rent{padding:12px;border-radius:12px;background:#0f0f0f;border:.5px solid rgba(255,229,150,.3)}
+.mc .rent small{display:block;font-size:.76rem;color:#bdbdbd;text-transform:uppercase;letter-spacing:.05em}
+.mc .rent strong{display:block;margin-top:4px;font:600 1.9rem/1 var(--font-h);color:#ffe596}
+.mc .row2{display:flex;justify-content:space-between;gap:8px;font-size:.84rem;color:#d6d6d6}
+.mc .row2 b{color:#9fd3a8}
+.byline{display:flex;gap:12px;align-items:center;margin-top:20px;padding:12px 14px;border-radius:14px;background:#151515;border:.5px solid rgba(255,229,150,.3)}
+.byline img{width:52px;height:52px;flex:none;border-radius:50%;object-fit:cover;object-position:50% 12%;border:1.5px solid #ffe596}
+.byline p{font-size:.86rem;line-height:1.4;color:#d6d6d6}
+.byline b{color:#fff}
+/* фінал */
+.final2{text-align:center}
+.final2 .h{font-size:min(9vw,38px)}
+.foot{margin-top:20px}
+</style>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<!-- Google Tag Manager (той самий контейнер, що на оригінальному ленді) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-53KFVH2D');</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '692219193723921');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=692219193723921&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<div class="page">
+
+<header class="hero">
+  <div class="in">
+    <span class="tag">Безкоштовна лекція</span>
+    <span class="script">Куди зникають</span>
+    <h1 class="h c" style="font-size:min(15vw,66px)">гроші<br><span class="g">салону?</span></h1>
+    <div class="lead2"><p class="no"><i>✕</i><span>Працюєте більше за своїх майстрів, а на рахунку знову нуль</span></p><p class="yes"><i>✓</i><span>Покажу, <b>де витікає прибуток</b> і як його повернути</span></p></div>
+    <div class="vid" data-order role="button" tabindex="0" aria-label="Відкрити доступ до лекції">
+      <video src="video/locked.mp4" poster="video/locked.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <span class="badge">🎁 <b>+ бонус</b> розбір «Zmina»</span>
+      <span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.4"/></svg></span>
+      <span class="cap">Відкрийте доступ безкоштовно</span>
+    </div>
+    <div class="free"><b>Безкоштовно</b><span>лекція + шаблон таблиці · доступ одразу</span></div>
+    <a class="gbtn" href="#order" data-order><span>Отримати безкоштовно<small>лекція + шаблон таблиці фінансів</small></span><i>↗</i></a>
+    <p class="hint">Тисни кнопку — доступ безкоштовно, одразу 👇</p>
+  </div>
+</header>
+
+<section class="about-l">
+  <div class="in">
+    <h2 class="h">Про що <span class="g">лекція</span></h2>
+    <ol class="pts">
+      <li><b>Куди зникають гроші</b><span>Аутопсія вашого бізнесу: 3 неочевидні причини, чому каса порожня</span></li>
+      <li><b>5 фінансових пасток</b><span>Щедра зарплата, мертвий склад, «хороший начальник» — і як закрити кожну</span></li>
+      <li><b>Формула прибутку CEO</b><span>Розподіл доходу, який ви впровадите того ж дня</span></li>
+      <li><b>Таблиця фінансів</b><span>Чистий прибуток у реальному часі за 15 хвилин на день — шаблон ваш</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="inside">
+  <div class="in">
+    <h2 class="h">Що <span class="g">всередині</span></h2>
+    <p class="swipe-hint">Гортай вбік →</p>
+    <div class="rail2">
+      <article><h3>Аутопсія вашого бізнесу</h3><ul><li>Чому ви багато працюєте, але мало заробляєте</li><li>3 причини, чому гроші «зникають» з каси</li><li>Де саме ви втрачаєте прибуток</li></ul></article>
+      <article><h3>5 фінансових вбивць</h3><ul><li>Пастки «Щедрої зарплати» і «Мертвого складу»</li><li>Пастки «Хорошого начальника» і «Незамінного експерта»</li><li>Пастка «Однієї послуги» — мінус тисячі гривень щодня</li></ul></article>
+      <article><h3>Формула прибутку CEO</h3><ul><li>Як рахувати гроші, щоб вони лишались у вашій кишені</li><li>Проста формула розподілу доходу</li><li>Впровадите того ж дня</li></ul></article>
+      <article><h3>Приладова панель бізнесу</h3><ul><li>Контроль фінансів за 15 хвилин на день</li><li>Google-таблиця з чистим прибутком</li><li>Шаблон отримаєте разом із лекцією</li></ul></article>
+      <article><h3>Масштабування без боргів</h3><ul><li>Коли насправді час рости</li><li>3 фінансові сигнали, що салон готовий до нової точки</li><li>Ріст без кредитів</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="proof2">
+  <div class="in">
+    <h2 class="h">Результати <span class="g">учениць</span></h2>
+    <p class="swipe-hint">Власниці салонів, що впровадили систему · гортай вбік →</p>
+    <div class="rail2 mini">
+<article class="mc"><header><img src="img/st-olena.webp" alt="" width="46" height="46" loading="lazy"><div><b>Олена</b><span>перукар-колорист · Київ</span></div></header><div class="rent"><small>Рентабельність</small><strong>−5% → 30%</strong></div><div class="row2"><span>6 → 10 майстрів</span><b>+290 000 ₴</b></div></article>
+<article class="mc"><header><img src="img/st-oleksii.webp" alt="" width="46" height="46" loading="lazy"><div><b>Олексій</b><span>36 років · Київ</span></div></header><div class="rent"><small>Рентабельність</small><strong>20% → 45%</strong></div><div class="row2"><span>4 → 12 майстрів</span><b>+460 000 ₴</b></div></article>
+<article class="mc"><header><img src="img/st-anastasia.webp" alt="" width="46" height="46" loading="lazy"><div><b>Анастасія</b><span>31 рік · Миколаїв</span></div></header><div class="rent"><small>Рентабельність</small><strong>15% → 35%</strong></div><div class="row2"><span>7 → 12 майстрів</span><b>+210 000 ₴</b></div></article>
+<article class="mc"><header><img src="img/st-yulia.webp" alt="" width="46" height="46" loading="lazy"><div><b>Юля</b><span>29 років · Київ</span></div></header><div class="rent"><small>Рентабельність</small><strong>15% → 35%</strong></div><div class="row2"><span>3 → 14 майстрів</span><b>+400 000 ₴</b></div></article>
+<article class="mc"><header><img src="img/st-mariana.webp" alt="" width="46" height="46" loading="lazy"><div><b>Мар’яна</b><span>Львів</span></div></header><div class="rent"><small>Рентабельність</small><strong>12% → 32%</strong></div><div class="row2"><span>2 → 8 майстрів + SMM</span><b>+150 000 ₴</b></div></article>
+<article class="mc"><header><img src="img/st-tania.webp" alt="" width="46" height="46" loading="lazy"><div><b>Таня</b><span>28 років · Черкаси</span></div></header><div class="rent"><small>Рентабельність</small><strong>5% → 28%</strong></div><div class="row2"><span>1 → 4 майстри</span><b>+115 230 ₴</b></div></article>
+    </div>
+    <div class="byline"><img src="img/olga-blazer.webp" alt="" width="658" height="756" loading="lazy"><p>Лекцію веде <b>Ольга Гончаренко</b> — власниця «ZMINA»: 3+ млн грн обігу на місяць, 40+ людей у команді</p></div>
+  </div>
+</section>
+
+<section class="final2">
+  <div class="in">
+    <h2 class="h">Тисни кнопку —<br><span class="g">і забирай доступ</span></h2>
+    <div class="free"><b>Безкоштовно</b><span>лекція + шаблон таблиці · доступ одразу</span></div>
+    <a class="gbtn" href="#order" data-order><span>Отримати безкоштовно<small>+ бонус: розбір «Zmina»</small></span><i>↗</i></a>
+    <p class="hint">Тисни кнопку — доступ безкоштовно, одразу 👇</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <p><b>Техпідтримка:</b> <a href="mailto:info.goncharenkoo@gmail.com">info.goncharenkoo@gmail.com</a></p>
+  <p>65059 Україна, Одеська обл., м. Одеса, Люстдорфська дорога, 52</p>
+  <p><a href="https://docs.google.com/document/d/1c2uTeGv-R1-mEwE0ATmOFJX7v--sv085p8x0TMqUFkY/edit?usp=sharing" target="_blank" rel="noopener">Політика конфіденційності</a> · <a href="https://docs.google.com/document/d/1vBvJbn3PtDNR4g0B_FI8pD4bjuF981UL9b78jvgkB04/edit?usp=sharing" target="_blank" rel="noopener">Договір публічної оферти</a></p>
+  <p>© olga-goncharenko.com.ua</p>
+</footer>
+</div>
+
+<div class="sticky-cta"><a class="btn" href="#order" data-order>Отримати безкоштовно</a></div>
+<dialog class="order" id="order" aria-labelledby="order-t">
+  <div class="order-in">
+    <button class="x" type="button" data-close aria-label="Закрити">×</button>
+    <h3 id="order-t">Безкоштовний доступ</h3>
+    <p class="when">Лекція «Фінансовий порядок» · Ольга Гончаренко</p>
+    <div class="free"><b>Безкоштовно</b><span>лекція + шаблон таблиці фінансів</span></div>
+    <div class="timer" data-countdown aria-label="Безкоштовний доступ закриється через"><div class="u"><b data-d>00</b><small>днів</small></div><i>:</i><div class="u"><b data-h>00</b><small>год</small></div><i>:</i><div class="u"><b data-m>00</b><small>хв</small></div><i>:</i><div class="u"><b data-s>00</b><small>сек</small></div></div>
+    <form action="https://mgw.bz/olga-goncharenko" method="post" novalidate>
+      <label>Ваше ім’я<input type="text" name="name" autocomplete="given-name" placeholder="Ваше ім’я" required></label>
+      <label>Телефон<input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="+38 (000) 000-00-00" required></label>
+      <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="utm_content">
+      <p class="f-err" role="alert" hidden></p>
+      <button class="btn wide" type="submit">Отримати доступ</button>
+    </form>
+    <p class="gift-line">🎁 + бонус: розбір стратегії росту салону «Zmina»</p>
+    <p class="note">Посилання на лекцію отримаєте одразу після реєстрації. Ваші дані конфіденційні та потрібні лише для зв’язку з менеджером.</p>
+  </div>
+</dialog>
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* Спільні стилі: попап із формою, таймер, кнопка. Кольори задає кожен варіант своїми змінними. */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 30px;border:0;border-radius:var(--btn-r,999px);background:var(--cta);color:var(--cta-ink);font:800 1.02rem/1.1 var(--font-b);letter-spacing:.02em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:var(--cta-shadow,none);transition:transform .15s ease,filter .15s ease}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.7;cursor:wait}
+.btn.wide{width:100%}
+
+.timer{display:flex;align-items:flex-start;gap:6px;font-family:var(--font-h)}
+.timer .u{display:flex;flex-direction:column;align-items:center;min-width:58px}
+.timer b{display:block;min-width:58px;padding:8px 6px;border-radius:10px;background:var(--timer-bg);color:var(--timer-ink);font-size:2rem;line-height:1;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.timer small{margin-top:5px;font:600 .66rem/1 var(--font-b);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.timer i{font-style:normal;font-size:1.6rem;line-height:48px;color:var(--muted)}
+.timer.is-over{display:none}
+
+/* margin:auto обовʼязково: загальний *{margin:0} інакше притискає вікно до кута */
+dialog.order{position:fixed;inset:0;margin:auto;height:fit-content;width:min(440px,calc(100% - 24px));max-height:calc(100dvh - 24px);padding:0;border:1px solid var(--line);border-radius:22px;background:var(--card);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.45);overflow:auto}
+dialog.order::backdrop{background:rgba(8,6,4,.72);backdrop-filter:blur(3px)}
+dialog.order[open]{animation:popIn .22s ease}
+@keyframes popIn{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.order-in{position:relative;padding:30px 24px 24px;text-align:center}
+.order .x{position:absolute;top:10px;right:10px;width:40px;height:40px;border:0;border-radius:50%;background:transparent;color:var(--muted);font-size:1.6rem;cursor:pointer}
+.order h3{font:700 1.9rem/1.05 var(--font-h);text-transform:var(--h-case,none)}
+.order .when{margin-top:8px;color:var(--muted);font-weight:600}
+.order .price{display:flex;justify-content:center;align-items:baseline;gap:12px;margin:16px 0 4px}
+.order .price b{font:800 2.1rem/1 var(--font-h);color:var(--accent)}
+.order .price s{color:var(--muted);font-weight:600}
+.order .timer{justify-content:center;margin:12px 0 18px}
+.order .timer b{font-size:1.6rem;min-width:50px}
+.order .timer .u{min-width:50px}
+.order .timer i{line-height:40px}
+.order form{display:grid;gap:12px;text-align:left}
+.order label{display:grid;gap:6px;font-size:.85rem;font-weight:600;color:var(--muted)}
+.order input[type=text],.order input[type=tel]{width:100%;height:56px;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--input-bg);color:var(--ink);font:500 1.05rem var(--font-b);outline:none}
+.order input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+.order .f-err{margin:0;color:#e5484d;font-size:.88rem;font-weight:600}
+.order .note{margin-top:12px;font-size:.8rem;color:var(--muted);text-align:center;line-height:1.45}
+
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--sticky-bg);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s ease}
+.sticky-cta .btn{width:100%;min-height:52px}
+@media (max-width:760px){.sticky-cta{display:block}body{padding-bottom:78px}}
+/* з'являється, коли перший екран прокручено; ховається під час попапу */
+.sticky-on .sticky-cta{transform:none}
+.lecture-started .sticky-cta,html:has(dialog[open]) .sticky-cta{display:none}
+.order .gift-line{margin-top:12px;padding:10px 12px;border-radius:12px;border:1px dashed var(--accent);font-size:.86rem;font-weight:600;line-height:1.4}
